@@ -96,7 +96,7 @@ services:
     volumes:
       - ./DeTrusty/Config/:/DeTrusty/Config/
     ports:
-      - "5002:5000"
+      - "500:5000"
     networks:
       - clarify
     depends_on:
