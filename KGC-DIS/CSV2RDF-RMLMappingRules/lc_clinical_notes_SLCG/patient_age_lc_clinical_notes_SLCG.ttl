@@ -14,7 +14,7 @@
 
 
 <LCPatient2_lc_clinical_notes_SLCG_patient_age>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/agePatient.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/agePatient.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

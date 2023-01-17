@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_HUPHM_tnm_stadification>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
     ]. 
 
 <TNM_Stage_assessment_lc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -63,7 +63,7 @@
     ]. 
 
 <TNM_Stage_lc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -96,7 +96,7 @@
 	].	
 
 <TumorSize_lc_clinical_notes_HUPHM_tnm_stadification>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <TumorSize_Function_lc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -116,7 +116,7 @@
 	]. 
 
 <LymphNodesInvolvement_lc_clinical_notes_HUPHM_tnm_stadification>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <LymphNodesInvolvement_Function_lc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -136,7 +136,7 @@
 	]. 
 
 <MetastatisStage_lc_clinical_notes_HUPHM_tnm_stadification>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <MetastatisStage_Function_lc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -156,7 +156,7 @@
 	].
 
 <TNM_version_lc_clinical_notes_HUPHM_tnm_stadification>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <TNM_version_Function_lc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -181,7 +181,7 @@
 
 <TumorSize_Function_lc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -218,7 +218,7 @@
 
 <LymphNodesInvolvement_Function_lc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -255,7 +255,7 @@
 
 <MetastatisStage_Function_lc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -292,7 +292,7 @@
 
 <TNM_version_Function_lc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

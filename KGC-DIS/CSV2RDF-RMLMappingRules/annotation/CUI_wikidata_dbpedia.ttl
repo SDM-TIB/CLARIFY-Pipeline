@@ -11,7 +11,7 @@
 
 
 <CUIs_dbpedia_wikidata_annotation_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/UMLS_combined.csv";
+	rml:logicalSource [ rml:source "/data/annotation/UMLS_combined.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].
 
 <wikidata_annotation_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/UMLS_combined.csv";
+	rml:logicalSource [ rml:source "/data/annotation/UMLS_combined.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -52,7 +52,7 @@
 	].
 
 <dbpedia_annotation_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/UMLS_combined.csv";
+	rml:logicalSource [ rml:source "/data/annotation/UMLS_combined.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

@@ -11,7 +11,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Phenotype_drug_phenotype>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/phenotype.csv";
+	rml:logicalSource [ rml:source "/data/drug/phenotype.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -26,7 +26,7 @@
 	].
 
 <HPOAnnotation_drug_phenotype>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/phenotype.csv";
+	rml:logicalSource [ rml:source "/data/drug/phenotype.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

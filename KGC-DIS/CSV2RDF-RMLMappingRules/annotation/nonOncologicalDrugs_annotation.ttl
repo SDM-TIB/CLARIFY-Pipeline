@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <OncologicalDrugs_lc_clinical_notes_nonOncologicalDrugs_annotation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/NonOncologicalDrugs-fromHospital.csv";
+	rml:logicalSource [ rml:source "/data/annotation/NonOncologicalDrugs-fromHospital.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -42,7 +42,7 @@
 	].
 
 <Annotation_lc_clinical_notes_nonOncologicalDrugs_annotation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/NonOncologicalDrugs-fromHospital.csv";
+	rml:logicalSource [ rml:source "/data/annotation/NonOncologicalDrugs-fromHospital.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

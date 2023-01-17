@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_ros1_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <Biomarker_lc_clinical_notes_SLCG_ros1_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
     rr:subjectMap [
@@ -61,7 +61,7 @@
 	].
 
 <BiomarkerIHQResult_lc_clinical_notes_SLCG_ros1_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <BiomarkerIHQResult_Function_lc_clinical_notes_SLCG_ros1_mutation> ;
@@ -81,7 +81,7 @@
 	].
 
 <BiomarkerFISHResult_lc_clinical_notes_SLCG_ros1_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <BiomarkerFISHResult_Function_lc_clinical_notes_SLCG_ros1_mutation> ;
@@ -101,7 +101,7 @@
 	].
 
 <study_performed_lc_clinical_notes_SLCG_ros1_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <study_performed_Function_lc_clinical_notes_SLCG_ros1_mutation> ;
@@ -126,7 +126,7 @@
 
 <BiomarkerIHQResult_Function_lc_clinical_notes_SLCG_ros1_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -163,7 +163,7 @@
 
 <BiomarkerFISHResult_Function_lc_clinical_notes_SLCG_ros1_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -200,7 +200,7 @@
 
 <study_performed_Function_lc_clinical_notes_SLCG_ros1_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/ros1_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

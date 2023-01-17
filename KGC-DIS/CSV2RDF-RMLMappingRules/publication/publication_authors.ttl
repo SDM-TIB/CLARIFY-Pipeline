@@ -9,7 +9,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <publication_authors>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/publication/publication_LC_authors.csv";
+	rml:logicalSource [ rml:source "/data/publication/publication_LC_authors.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

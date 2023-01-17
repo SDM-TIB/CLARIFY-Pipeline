@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <wp2_cui_labels_annotation_cui_annotation_wp2_data_batch2>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/umls_concepts_v2.csv";
+	rml:logicalSource [ rml:source "/data/annotation/umls_concepts_v2.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -24,7 +24,7 @@
 	].
 
 <Annotation_annotation_cui_annotation_wp2_data_batch2>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/umls_concepts_v2.csv";
+	rml:logicalSource [ rml:source "/data/annotation/umls_concepts_v2.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

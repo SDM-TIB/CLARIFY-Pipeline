@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <DrugSideEffectInteraction_drug_drugToxicityInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_toxicities_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_toxicities_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -25,7 +25,7 @@
 	].	
 
 <Drug_drug_drugToxicityInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_toxicities_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_toxicities_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -39,7 +39,7 @@
 	].
 
 <Phenotype_drug_drugToxicityInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_toxicities_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_toxicities_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

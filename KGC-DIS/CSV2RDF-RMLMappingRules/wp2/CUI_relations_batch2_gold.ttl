@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Subject_Relation_Object_CUI_relations_batch2>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/gold_triples_with_sources.csv";
+	rml:logicalSource [ rml:source "/data/wp2/gold_triples_with_sources.csv";
 						rml:referenceFormulation ql:CSV 
 						];
     rr:subjectMap [

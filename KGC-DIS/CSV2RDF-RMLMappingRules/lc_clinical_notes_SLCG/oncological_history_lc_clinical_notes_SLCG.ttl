@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_oncological_history>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/oncological_history.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/oncological_history.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -40,7 +40,7 @@
 	].	
 
 <has_previous_cancers_lc_clinical_notes_SLCG_oncological_history>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/oncological_history.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/oncological_history.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <has_previous_cancers_Function_lc_clinical_notes_SLCG_oncological_history> ;
@@ -60,7 +60,7 @@
 	].
 
 <previous_cancer_type_lc_clinical_notes_SLCG_oncological_history>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/oncological_history.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/oncological_history.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <previous_cancer_type_Function_lc_clinical_notes_SLCG_oncological_history> ;
@@ -85,7 +85,7 @@
 
 <has_previous_cancers_Function_lc_clinical_notes_SLCG_oncological_history>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/oncological_history.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/oncological_history.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -122,7 +122,7 @@
 
 <previous_cancer_type_Function_lc_clinical_notes_SLCG_oncological_history>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/oncological_history.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/oncological_history.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

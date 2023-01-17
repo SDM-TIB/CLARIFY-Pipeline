@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <DrugSideEffectInteraction_drug_drugSideEffectInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -32,7 +32,7 @@
 	].	
 
 <Drug_drug_drugSideEffectInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -46,7 +46,7 @@
 	].
 
 <Phenotype_drug_drugSideEffectInteraction>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

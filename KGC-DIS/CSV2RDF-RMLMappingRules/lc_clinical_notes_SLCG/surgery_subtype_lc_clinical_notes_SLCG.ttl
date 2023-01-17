@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <OncologicalSurgery_lc_clinical_notes_SLCG_surgery_subtype>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <SurgeryIteration_lc_clinical_notes_SLCG_surgery_subtype>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -49,7 +49,7 @@
 	].
 
 <SurgerySubType_lc_clinical_notes_SLCG_surgery_subtype>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <SurgerySubType_Function_lc_clinical_notes_SLCG_surgery_subtype> ;
@@ -74,7 +74,7 @@
 
 <SurgerySubType_Function_lc_clinical_notes_SLCG_surgery_subtype>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

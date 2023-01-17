@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_clinical_trial>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].
 
 <drug_trial_lc_clinical_notes_SLCG_clinical_trial>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <drug_trial_Function_lc_clinical_notes_SLCG_clinical_trial> ;
@@ -66,7 +66,7 @@
     ].
 
 <observational_sanitary_others_lc_clinical_notes_SLCG_clinical_trial>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <observational_sanitary_others_Function_lc_clinical_notes_SLCG_clinical_trial> ;
@@ -86,7 +86,7 @@
     ].
 
 <participation_clinical_trial_lc_clinical_notes_SLCG_clinical_trial>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <participation_clinical_trial_Function_lc_clinical_notes_SLCG_clinical_trial> ;
@@ -106,7 +106,7 @@
 	].
 
 <participation_trial_or_database_lc_clinical_notes_SLCG_clinical_trial>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <participation_trial_or_database_Function_lc_clinical_notes_SLCG_clinical_trial> ;
@@ -131,7 +131,7 @@
 
 <observational_sanitary_others_Function_lc_clinical_notes_SLCG_clinical_trial>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -168,7 +168,7 @@
 
 <drug_trial_Function_lc_clinical_notes_SLCG_clinical_trial>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -205,7 +205,7 @@
 
 <participation_clinical_trial_Function_lc_clinical_notes_SLCG_clinical_trial>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -242,7 +242,7 @@
 
 <participation_trial_or_database_Function_lc_clinical_notes_SLCG_clinical_trial>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/clinical_trial.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

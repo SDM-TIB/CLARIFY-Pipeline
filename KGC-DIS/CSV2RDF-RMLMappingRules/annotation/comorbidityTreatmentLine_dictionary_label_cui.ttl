@@ -14,7 +14,7 @@
 
 
 <EntityLabels2_annotation_comorbidityTreatmentLine_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/id_cuis_kg.csv";
+	rml:logicalSource [ rml:source "/data/annotation/id_cuis_kg.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <Annotation_annotation_comorbidityTreatmentLine_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/id_cuis_kg.csv";
+	rml:logicalSource [ rml:source "/data/annotation/id_cuis_kg.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

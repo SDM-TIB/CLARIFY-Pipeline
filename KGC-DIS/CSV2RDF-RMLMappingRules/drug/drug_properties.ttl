@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <DrugAbsorption_drug_drug_properties>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_absorption.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_absorption.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -24,7 +24,7 @@
 	].
 
 <DrugMechanismOfAction_drug_drug_properties>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/drugs_mechanismOfAction.csv";
+	rml:logicalSource [ rml:source "/data/drug/drugs_mechanismOfAction.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

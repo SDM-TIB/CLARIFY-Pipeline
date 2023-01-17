@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <Biomarker_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
     rr:subjectMap [
@@ -91,7 +91,7 @@
 	].
 
 <BiomarkerNegativeResult_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_negative_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -111,7 +111,7 @@
 	].	
 
 <T790Result_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_t790_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -131,7 +131,7 @@
 	].
 
 <T790MResult_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_t790m_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -151,7 +151,7 @@
 	].
 
 <Exon19Result_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_exon19_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -171,7 +171,7 @@
 	].
 
 <Exon21Result_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_exon21_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -191,7 +191,7 @@
 	].
 
 <NOS_result_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_nos_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -211,7 +211,7 @@
 	].
 
 <others_result_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <result_egfr_others_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -231,7 +231,7 @@
 	].	
 
 <study_performed_lc_clinical_notes_SLCG_egfr_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <study_performed_Function_lc_clinical_notes_SLCG_egfr_mutation> ;
@@ -256,7 +256,7 @@
 
 <result_egfr_negative_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -293,7 +293,7 @@
 
 <result_egfr_t790_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -330,7 +330,7 @@
 
 <result_egfr_t790m_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -367,7 +367,7 @@
 
 <result_egfr_exon19_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -404,7 +404,7 @@
 
 <result_egfr_exon21_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -441,7 +441,7 @@
 
 <result_egfr_nos_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -478,7 +478,7 @@
 
 <result_egfr_others_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -515,7 +515,7 @@
 
 <study_performed_Function_lc_clinical_notes_SLCG_egfr_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/egfr_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

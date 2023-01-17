@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_HUPHM_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
     ].
 
 <progressionRelapseObservation_lc_clinical_notes_HUPHM_relapse_progression>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -62,7 +62,7 @@
     ].
 
 <ProgressionRelapse_lc_clinical_notes_HUPHM_relapse_progression>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <ProgressionRelapse_Function_lc_clinical_notes_HUPHM_relapse_progression> ;
@@ -83,7 +83,7 @@
 
     
 <ProgressionType_lc_clinical_notes_HUPHM_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <ProgressionType_Function_lc_clinical_notes_HUPHM_relapse_progression> ;
@@ -103,7 +103,7 @@
 	]. 
 
 <TherapyType_lc_clinical_notes_HUPHM_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <TherapyType_Function_lc_clinical_notes_HUPHM_relapse_progression> ;
@@ -129,7 +129,7 @@
 
 <ProgressionRelapse_Function_lc_clinical_notes_HUPHM_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -166,7 +166,7 @@
 
 <ProgressionType_Function_lc_clinical_notes_HUPHM_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -203,7 +203,7 @@
 
 <TherapyType_Function_lc_clinical_notes_HUPHM_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

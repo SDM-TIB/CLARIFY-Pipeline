@@ -9,7 +9,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Biomarker_drug_biomarkerIndication>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/biomarkers_drugs.csv";
+	rml:logicalSource [ rml:source "/data/drug/biomarkers_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

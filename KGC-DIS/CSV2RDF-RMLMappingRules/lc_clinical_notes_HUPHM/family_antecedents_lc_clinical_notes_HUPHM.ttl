@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_HUPHM_family_antecedents>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -40,7 +40,7 @@
 	].	
 
 <FamilyWithCancer_lc_clinical_notes_HUPHM_family_antecedents>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <FamilyWithCancer_Function_lc_clinical_notes_HUPHM_family_antecedents> ;
@@ -60,7 +60,7 @@
     ].
 
 <ParentWithCancer_lc_clinical_notes_HUPHM_family_antecedents>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <ParentWithCancer_Function_lc_clinical_notes_HUPHM_family_antecedents> ;
@@ -80,7 +80,7 @@
     ].
 
 <FamilyHistory_lc_clinical_notes_HUPHM_family_antecedents>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -101,7 +101,7 @@
     ].
 
 <FamilyType_lc_clinical_notes_HUPHM_family_antecedents>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
 						rml:referenceFormulation ql:CSV;
 						];	
     rr:subjectMap <FamilyType_Function_lc_clinical_notes_HUPHM_family_antecedents> ;
@@ -122,7 +122,7 @@
 
 
 <FamilyDegree_lc_clinical_notes_HUPHM_family_antecedents>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
                         rml:referenceFormulation ql:CSV;
                         ];  
     rr:subjectMap <family_degree_Function_lc_clinical_notes_HUPHM_family_antecedents> ;
@@ -147,7 +147,7 @@
 
 <FamilyWithCancer_Function_lc_clinical_notes_HUPHM_family_antecedents>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -184,7 +184,7 @@
 
 <ParentWithCancer_Function_lc_clinical_notes_HUPHM_family_antecedents>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -222,7 +222,7 @@
 
 <FamilyType_Function_lc_clinical_notes_HUPHM_family_antecedents>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -259,7 +259,7 @@
 
 <family_degree_Function_lc_clinical_notes_HUPHM_family_antecedents>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/family_antecedents.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

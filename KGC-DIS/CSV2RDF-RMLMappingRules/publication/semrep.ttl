@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Relation_publication_annotation_seprep>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/publication/Semrep_Annotations.csv";
+	rml:logicalSource [ rml:source "/data/publication/Semrep_Annotations.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap <Relation_publication_annotation_function_seprep> ;
@@ -61,7 +61,7 @@
 
 <Relation_publication_annotation_function_seprep>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/publication/Semrep_Annotations.csv";
+        rml:logicalSource [ rml:source "/data/publication/Semrep_Annotations.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -108,7 +108,7 @@
 
 <Relation_representation_function_seprep>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/publication/Semrep_Annotations.csv";
+        rml:logicalSource [ rml:source "/data/publication/Semrep_Annotations.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -131,7 +131,7 @@
 
 <Relation_function_seprep>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/publication/Semrep_Annotations.csv";
+        rml:logicalSource [ rml:source "/data/publication/Semrep_Annotations.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

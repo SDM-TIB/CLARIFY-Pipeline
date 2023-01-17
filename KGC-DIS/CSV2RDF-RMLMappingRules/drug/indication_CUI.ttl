@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Disorder_drug_indication_CUI>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/indication_CUI.csv";
+	rml:logicalSource [ rml:source "/data/drug/indication_CUI.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

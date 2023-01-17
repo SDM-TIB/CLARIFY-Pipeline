@@ -14,7 +14,7 @@
 
 
 <EntityLabels2_annotation_comorbidities_SLCG>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/comorbidities_SLCG.csv";
+	rml:logicalSource [ rml:source "/data/annotation/comorbidities_SLCG.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <Annotation_annotation_comorbidities_SLCG>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/comorbidities_SLCG.csv";
+	rml:logicalSource [ rml:source "/data/annotation/comorbidities_SLCG.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

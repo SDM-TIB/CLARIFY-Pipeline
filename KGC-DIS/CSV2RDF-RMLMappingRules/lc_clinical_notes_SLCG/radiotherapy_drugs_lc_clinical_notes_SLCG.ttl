@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <RadiotherapyTreatmentLine_lc_clinical_notes_SLCG_radiotherapy_drugs>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/radiotherapy_drugs.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/radiotherapy_drugs.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -40,7 +40,7 @@
 	].	
 
 <Annotation_lc_clinical_notes_SLCG_radiotherapy_drugs>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/radiotherapy_drugs.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/radiotherapy_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

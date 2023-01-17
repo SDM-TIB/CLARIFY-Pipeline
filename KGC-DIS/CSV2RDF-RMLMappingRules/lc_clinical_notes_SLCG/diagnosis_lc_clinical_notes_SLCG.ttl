@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_diagnosis>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].
 
 <Diagnosis_lc_clinical_notes_SLCG_diagnosis>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -49,7 +49,7 @@
 	].
 
 <CancerStage_lc_clinical_notes_SLCG_diagnosis>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <stage_Function_lc_clinical_notes_SLCG_diagnosis> ;
@@ -69,7 +69,7 @@
 	].
 
 <SynchronousTumor_lc_clinical_notes_SLCG_diagnosis>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <SynchronousTumor_Function_lc_clinical_notes_SLCG_diagnosis> ;
@@ -94,7 +94,7 @@
 
 <stage_Function_lc_clinical_notes_SLCG_diagnosis>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -131,7 +131,7 @@
 
 <SynchronousTumor_Function_lc_clinical_notes_SLCG_diagnosis>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/diagnosis.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

@@ -15,7 +15,7 @@
 @prefix ov: <http://open.vocab.org/terms/> .
  
 <metadata_agrelon_correspondsToInverse_annotation_metadata>
-  rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/metadata_agrelon_correspondsToInverse.csv";
+  rml:logicalSource [ rml:source "/data/annotation/metadata_agrelon_correspondsToInverse.csv";
             rml:referenceFormulation ql:CSV 
             ];
   rr:subjectMap [
@@ -29,7 +29,7 @@
   ].
 
 <metadata_ov_similarTo_annotation_metadata>
-  rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/metadata_ov_similarTo.csv";
+  rml:logicalSource [ rml:source "/data/annotation/metadata_ov_similarTo.csv";
             rml:referenceFormulation ql:CSV 
             ];
   rr:subjectMap [
@@ -43,7 +43,7 @@
   ].
 
 <metadata_owl_sameAs_annotation_metadata>
-  rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/metadata_owl_sameAs.csv";
+  rml:logicalSource [ rml:source "/data/annotation/metadata_owl_sameAs.csv";
             rml:referenceFormulation ql:CSV 
             ];
   rr:subjectMap [
@@ -57,7 +57,7 @@
   ].
 
 <metadata_rdfs_subClassOf_annotation_metadata>
-  rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/metadata_rdfs_subClassOf.csv";
+  rml:logicalSource [ rml:source "/data/annotation/metadata_rdfs_subClassOf.csv";
             rml:referenceFormulation ql:CSV 
             ];
   rr:subjectMap [

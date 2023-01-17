@@ -14,7 +14,7 @@
 
 
 <EntityLabel_annotation_dictionary_label_cui>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/dictionary_labels_cui.csv";
+	rml:logicalSource [ rml:source "/data/annotation/dictionary_labels_cui.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <EntityAnnotation_annotation_dictionary_label_cui>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/annotation/dictionary_labels_cui.csv";
+    rml:logicalSource [ rml:source "/data/annotation/dictionary_labels_cui.csv";
                         rml:referenceFormulation ql:CSV 
                         ];
     rr:subjectMap [

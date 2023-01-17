@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_family_antecedents>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/family_antecedents.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -42,7 +42,7 @@
 	].
 
 <FamilyWithCancer_lc_clinical_notes_SLCG_family_antecedents>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/family_antecedents.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <FamilyWithCancer_Function_lc_clinical_notes_SLCG_family_antecedents> ;
@@ -67,7 +67,7 @@
 
 <FamilyWithCancer_Function_lc_clinical_notes_SLCG_family_antecedents>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/family_antecedents.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

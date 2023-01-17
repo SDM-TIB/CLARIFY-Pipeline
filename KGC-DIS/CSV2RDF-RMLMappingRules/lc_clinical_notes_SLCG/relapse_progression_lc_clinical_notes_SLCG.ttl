@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].
 
 <progressionRelapseObservation_lc_clinical_notes_SLCG_relapse_progression>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -69,7 +69,7 @@
  
 
 <Progression_or_Relapse_lc_clinical_notes_SLCG_relapse_progression>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <Progression_or_Relapse_concat_treatmentLine_Function_lc_clinical_notes_SLCG_relapse_progression> ;
@@ -89,7 +89,7 @@
     ].	
 
 <ProgressionType_lc_clinical_notes_SLCG_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <ProgressionType_Function_lc_clinical_notes_SLCG_relapse_progression> ;
@@ -109,7 +109,7 @@
 	]. 
 
 <TherapyType_lc_clinical_notes_SLCG_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <TherapyType_Function_lc_clinical_notes_SLCG_relapse_progression> ;
@@ -129,7 +129,7 @@
 	]. 	
 	
 <TreatmentLineNumber_lc_clinical_notes_SLCG_relapse_progression>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -143,7 +143,7 @@
 
 <Progression_or_Relapse_concat_treatmentLine_Function_lc_clinical_notes_SLCG_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -173,7 +173,7 @@
 
 <Progression_or_Relapse_Function_lc_clinical_notes_SLCG_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -210,7 +210,7 @@
 
 <ProgressionType_Function_lc_clinical_notes_SLCG_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -247,7 +247,7 @@
 
 <TherapyType_Function_lc_clinical_notes_SLCG_relapse_progression>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/relapse_progression.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

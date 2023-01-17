@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_smoker_information>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -67,7 +67,7 @@
     ].
 
 <smoker_type_lc_clinical_notes_SLCG_smoker_information>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <smoker_type_Function_lc_clinical_notes_SLCG_smoker_information> ;
@@ -87,7 +87,7 @@
     ]. 
 
 <lives_with_smokers_lc_clinical_notes_SLCG_smoker_information>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <lives_with_smokers_Function_lc_clinical_notes_SLCG_smoker_information> ;
@@ -107,7 +107,7 @@
     ]. 
 
 <has_lived_with_smokers_lc_clinical_notes_SLCG_smoker_information>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <has_lived_with_smokers_Function_lc_clinical_notes_SLCG_smoker_information> ;
@@ -127,7 +127,7 @@
     ].
 
 <smoking_habit_lc_clinical_notes_SLCG_smoker_information>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <smoking_habit_lc_clinical_notes_SLCG_smoker_information> ;
@@ -153,7 +153,7 @@
 <smoker_type_Function_lc_clinical_notes_SLCG_smoker_information>
 
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -178,7 +178,7 @@
 
 <lives_with_smokers_Function_lc_clinical_notes_SLCG_smoker_information>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -215,7 +215,7 @@
 
 <has_lived_with_smokers_Function_lc_clinical_notes_SLCG_smoker_information>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -252,7 +252,7 @@
 
 <smoking_habit_lc_clinical_notes_SLCG_smoker_information>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/smoker_information.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/smoker_information.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

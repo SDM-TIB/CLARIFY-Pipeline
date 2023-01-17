@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <DrugDrugInteraction_drug_CRD>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/CRD.csv";
+	rml:logicalSource [ rml:source "/data/drug/CRD.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

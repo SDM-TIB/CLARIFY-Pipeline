@@ -10,7 +10,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Phenotype_drug_toxicity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/toxicitiesAndTypes_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/toxicitiesAndTypes_processed.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -43,7 +43,7 @@
 	].	
 
 <Annotation1_drug_toxicity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/toxicitiesAndTypes_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/toxicitiesAndTypes_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -64,7 +64,7 @@
 	].
 
 <Annotation2_drug_toxicity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/drug/toxicitiesAndTypes_processed.csv";
+	rml:logicalSource [ rml:source "/data/drug/toxicitiesAndTypes_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

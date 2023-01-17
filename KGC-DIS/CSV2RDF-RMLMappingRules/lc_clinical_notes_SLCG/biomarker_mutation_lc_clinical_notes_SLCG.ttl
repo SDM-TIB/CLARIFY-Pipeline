@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_biomarker_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
 	].	
 
 <Biomarker_lc_clinical_notes_SLCG_biomarker_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -52,7 +52,7 @@
 		]
 	].	
 <BiomarkerResult_lc_clinical_notes_SLCG_biomarker_mutation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <BiomarkerResult_Function_lc_clinical_notes_SLCG_biomarker_mutation> ;
@@ -71,7 +71,7 @@
 
 <BiomarkerResult_Function_lc_clinical_notes_SLCG_biomarker_mutation>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/alk_mutation.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/alk_mutation.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <LCPatient_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -28,7 +28,7 @@
     ]. 
 
 <TumorHistologyAssessment_lc_clinical_notes_SLCG_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -57,7 +57,7 @@
     ]. 
 
 <TumorHistology_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <TumorType_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -107,7 +107,7 @@
 	].
 
 <AdenocarcinomaHistology_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <AdenocarcinomaHistology_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -127,7 +127,7 @@
 	].
 
 <SmallCellCarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <SmallCellCarcinomaType_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -147,7 +147,7 @@
 	].
 
 <CarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <CarcinomaType_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -167,7 +167,7 @@
 	].
 
 <MesotheliomaType_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <MesotheliomaType_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -187,7 +187,7 @@
 	].
 
 <HistologyDegree_lc_clinical_notes_SLCG_tumor_histology>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <HistologyDegree_Function_lc_clinical_notes_SLCG_tumor_histology> ;
@@ -212,7 +212,7 @@
 
 <TumorType_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -249,7 +249,7 @@
 
 <AdenocarcinomaHistology_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -286,7 +286,7 @@
 
 <SmallCellCarcinomaType_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -323,7 +323,7 @@
 
 <CarcinomaType_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -360,7 +360,7 @@
 
 <MesotheliomaType_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -397,7 +397,7 @@
 
 <HistologyDegree_Function_lc_clinical_notes_SLCG_tumor_histology>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+        rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
