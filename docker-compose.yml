@@ -1,0 +1,107 @@
+version: "8.3"
+services:
+  sdmrdfizer_clarify:
+    image: sdmtib/sdmrdfizer:4.3.6
+    hostname: sdmrdfizer_clarify 
+    container_name: sdmrdfizer_clarify
+    domainname: clarify
+    volumes:
+      - ./data:/data
+      - ./rdf:/data/rdf-dump
+      - ./KGC-DIS/SDM-RDFizer-Configs:/data/configs
+      - ./KGC-DIS/CSV2RDF-RMLMappingRules:/data/mappings
+      - ./scripts:/data/scripts
+      - ./KGC-DIS:/data/ttl
+    networks:
+      - clarify
+    depends_on:
+      - clarifykg
+    environment:
+      - SPARQL_ENDPOINT_IP=clarifykg
+      - SPARQL_ENDPOINT_USER=dba
+      - SPARQL_ENDPOINT_PASSWD=dba
+      - SPARQL_ENDPOINT_PORT=1111
+      - SPARQL_ENDPOINT_GRAPH=http://research.tib.eu/clarify2020
+      - RDF_DUMP_FOLDER_PATH=/data/rdf-dump/
+      - TTL_DUMP_FOLDER_PATH=/data/ttl/
+      - SPARQL_MAPPINGS_ENDPOINT_IP=clarify_mappings
+      
+
+  clarifykg:
+    image: kemele/virtuoso:6-stable
+    hostname: clarifykg
+    container_name: clarifykg
+    domainname: clarify
+    volumes:
+      - ./rdf-dump:/data
+      - ./rdf:/data/rdf-dump
+      - ./KGC-DIS:/data/ttl
+    ports:
+      - "12200:8890"
+    networks:
+      - clarify
+      
+  clarify_mappings:
+    image: kemele/virtuoso:6-stable
+    hostname: clarify_mappings
+    container_name: clarify_mappings
+    domainname: clarify
+    volumes:
+      - ./rdf-dump-mappings:/data
+      - ./KGC-DIS:/data/ttl
+    ports:
+      - "12201:8890"
+    networks:
+      - clarify
+ 
+#    clarify_exp_api:
+#     image: sdmtib/clarify_exploration:2.0
+#     hostname: clarify_exploration_api
+#     container_name: clarify_exploration_api
+#     domainname: clarify
+#     ports:
+#       - "18873:5000"
+#     environment:
+#       - ENDPOINT=http://node2.research.tib.eu:8893/sparql
+#     networks:
+#       - clarify
+      
+  clarify_dereferencing:
+    image: asanchez75/pubby:v0.3.3
+    hostname: pubby
+    container_name: clarify_pubby
+    domainname: clarify
+    ports:
+        - "12202:8080"
+    networks:
+      - clarify
+    environment:
+      SPARQL_ENDPOINT: "https://labs.tib.eu/sdm/clarify_kg/sparql"
+      PROJECT_HOMEPAGE_URL: "http://research.tib.eu/clarify2020/"
+      PROJECT_NAME: "CLARIFY"
+      DEFAULT_RESOURCE: "http://research.tib.eu/clarify2020/entity/C0168273"
+      DEFAULT_NAMED_GRAPH: "http://research.tib.eu/clarify2020"
+      COMMON_URI_PREFIX: "http://research.tib.eu/clarify2020/"
+      WEB_RESOURCE_PREFIX: ""
+      PUBBY_ROOT_URL: "https://research.tib.eu/clarify2020/"
+    restart: always
+    tty: true
+    
+          
+  clarify_detrusty:
+    image: sdmtib/detrusty:0.7.2
+    hostname: detrusty
+    container_name: clarify_detrusty
+    domainname: clarify
+    volumes:
+      - ./DeTrusty/Config/:/DeTrusty/Config/
+    ports:
+      - "5002:5000"
+    networks:
+      - clarify
+    depends_on:
+      - clarifykg
+
+networks:
+  clarify:
+    external: false
