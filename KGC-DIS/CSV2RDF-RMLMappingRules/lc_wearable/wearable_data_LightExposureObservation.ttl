@@ -16,7 +16,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <LCPatient_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -57,7 +57,7 @@
 ######## LightIndicator ##########
 
 <LightExposureObservation_LightIndicator_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -84,7 +84,7 @@
 	].
 
 <LightIndicator_value_unit_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -102,7 +102,7 @@
 ######## DarknessExposurePercentage ##########
 
 <LightExposureObservation_DarknessExposurePercentage_lc_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -129,7 +129,7 @@
 	].
 
 <DarknessExposurePercentage_value_unit_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -147,7 +147,7 @@
 ######## IndoorLightExposurePercentage ##########
 
 <LightExposureObservation_IndoorLightExposurePercentage_lc_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -174,7 +174,7 @@
 	].
 
 <IndoorLightExposurePercentage_value_unit_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -193,7 +193,7 @@
 ######## OutdoorLightExposurePercentage ##########
 
 <LightExposureObservation_OutdoorLightExposurePercentage_lc_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -220,7 +220,7 @@
 	].
 
 <OutdoorLightExposurePercentage_value_unit_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_LightExposureObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_LightExposureObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

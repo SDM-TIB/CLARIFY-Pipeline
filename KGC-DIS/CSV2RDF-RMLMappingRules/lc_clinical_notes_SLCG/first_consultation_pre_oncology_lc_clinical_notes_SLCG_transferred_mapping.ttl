@@ -1,0 +1,316 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix clarifyFun: <http://clarify2020.eu/function/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/asthenia_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL469C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "asthenia"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/weightLoss_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL543C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "weight_loss"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/NonOncologicalConsultation_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_NonOncologicalConsultationDate_{date_consultation}";
+        rr:class clarify:NonOncologicalConsultation
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL358C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:date;
+        rr:objectMap [
+        rml:reference "date_consultation";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL543C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL395C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL321C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL432C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL469C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:patient_is_asymptomatic;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL284C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL580C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub12bL506C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/cough_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL321C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "cough"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/anorexia_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT5.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL506C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "anorexy"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasNonOncologicalConsultation;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/NonOncologicalConsultation_lc_clinical_notes_SLCG_first_consultation_pre_oncology>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "date_consultation";
+            rr:parent "date_consultation";
+        ];
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/hemoptysis_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT7.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL432C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "hemoptysis"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/pain_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT8.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL358C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "pain"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/dyspnoea_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT9.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL395C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "dyspnoea"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/asymptomatic_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT10.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL284C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "asymptomatic"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/weightLoss_last_3_months_lc_clinical_notes_SLCG_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/first_consultation_pre_oncology_lc_clinical_notes_SLCG_PROJECT11.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub12bL580C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "weight_loss_last_3_months"
+        ]
+    ].
+

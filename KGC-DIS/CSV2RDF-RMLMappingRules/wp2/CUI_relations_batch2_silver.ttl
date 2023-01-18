@@ -10,37 +10,37 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix clarifyFun: <http://clarify2020.eu/function/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix clarify: <http://clarify2020.eu/vocab/> .
+@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <Subject_Relation_Object_CUI_relations_batch2_silver>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/silver_triples.csv";
+	rml:logicalSource [ rml:source "/data/wp2/silver_triples.csv";
 						rml:referenceFormulation ql:CSV 
 						];
     rr:subjectMap [
-        rr:template "http://clarify2020.eu/entity/{subject_cui}_{relationship}_{object_cui}";
+        rr:template "http://research.tib.eu/clarify2020/entity/{subject_cui}_{relationship}_{object_cui}";
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-            rr:template "http://clarify2020.eu/vocab/{relationship}"
+            rr:template "http://research.tib.eu/clarify2020/vocab/{relationship}"
         ]
     ];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_subject_annotation;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/{subject_cui}"
+			rr:template "http://research.tib.eu/clarify2020/entity/{subject_cui}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_object_annotation;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/{object_cui}"
+			rr:template "http://research.tib.eu/clarify2020/entity/{object_cui}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate prov:has_provenance;
 		rr:objectMap [
-			rr:constant "http://clarify2020.eu/entity/WP2_UCL"
+			rr:constant "http://research.tib.eu/clarify2020/entity/WP2_UCL"
 		]
 	];
 	rr:predicateObjectMap [

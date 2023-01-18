@@ -14,7 +14,7 @@
 
 
 <BCPatient_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -29,7 +29,7 @@
     ].
 
 <Treatment_Episode_radiotherapy_bc_clinical_notes_HUPHM_radiotherapy_treatment_episode>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -64,7 +64,7 @@
     ].
 
 <RadiotherapyTreatmentLine_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -99,7 +99,7 @@
 	].
 
 <TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/radiotherapy.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

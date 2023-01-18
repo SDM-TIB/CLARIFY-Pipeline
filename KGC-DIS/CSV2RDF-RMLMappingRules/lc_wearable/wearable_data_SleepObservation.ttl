@@ -16,7 +16,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <LCPatient_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -75,7 +75,7 @@
 ######## Sleep Duration ##########
 
 <SleepObservation_SleepDuration_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -102,7 +102,7 @@
 	].
 
 <SleepDuration_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -126,7 +126,7 @@
 ######## Sleep Regularity ##########
 
 <SleepObservation_SleepRegularity_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -153,7 +153,7 @@
 	].
 
 <SleepRegularity_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -171,7 +171,7 @@
 ######## Sleep Fragmentation ##########
 
 <SleepObservation_SleepFragmentation_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -198,7 +198,7 @@
 	].
 
 <SleepFragmentation_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -216,7 +216,7 @@
 ######## Sleep Contrast ##########
 
 <SleepObservation_SleepRegularity_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -243,7 +243,7 @@
 	].
 
 <SleepContrast_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -261,7 +261,7 @@
 ######## Sleep Average Duration ##########
 
 <SleepObservation_SleepAverageDuration_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -288,7 +288,7 @@
 	].
 
 <SleepAverageDuration_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -312,7 +312,7 @@
 ######## Movement While Sleeping ##########
 
 <SleepObservation_MovementWhileSleeping_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -339,7 +339,7 @@
 	].
 
 <MovementWhileSleeping_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -363,7 +363,7 @@
 ######## Sleep Duration Percentage ##########
 
 <SleepObservation_SleepDurationPercentage_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -390,7 +390,7 @@
 	].
 
 <SleepDurationPercentage_value_unit_lc_wearable_wearable_data_SleepObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_SleepObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_SleepObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

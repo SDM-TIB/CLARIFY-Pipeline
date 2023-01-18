@@ -1,0 +1,163 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix clarifyFun: <http://clarify2020.eu/function/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/FamilyDegree_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findFamilyRelationDegree_ub11bL337C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "family_member"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/FamilyRelationDegree"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/CancerType_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub11bL263C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "cancer_type"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/CancerType"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasFamilyHistory;
+        rr:objectMap [
+        rml:reference "concat6_ub11bL153C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/FamilyDegree_newCategory_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findFamilyRelationDegreeNewCategory_ub11bL374C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/FamilyRelationDegree"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "family_member"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/FamilyType_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT5.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub11bL300C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "family_member"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/FamilyType"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/FamilyHistory_lc_clinical_notes_SLCG_family_antecedents_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_treatment_line_lc_clinical_notes_SLCG_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "concat6_ub11bL153C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasFamilyCancerType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub11bL263C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:familyType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub11bL300C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:familyRelationDegree;
+        rr:objectMap [
+        rml:reference "findFamilyRelationDegreeNewCategory_ub11bL374C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:familyRelationDegree;
+        rr:objectMap [
+        rml:reference "findFamilyRelationDegree_ub11bL337C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/FamilyHistory"
+        ]
+    ].
+

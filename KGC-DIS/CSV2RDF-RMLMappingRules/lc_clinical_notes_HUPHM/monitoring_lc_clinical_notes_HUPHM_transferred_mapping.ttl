@@ -1,0 +1,141 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix clarifyFun: <http://clarify2020.eu/function/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/CurrentStatus_lc_clinical_notes_HUPHM_monitoring>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/monitoring_lc_clinical_notes_HUPHM_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{status}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/CurrentStatus"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/StatusEvolution_lc_clinical_notes_HUPHM_monitoring>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/monitoring_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/StatusEvolutionOfHUPHM_{EHR}";
+        rr:class clarify:StatusEvolution
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasCauseOfDeath;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub11bL129C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasCurrentStatus;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/CurrentStatus_lc_clinical_notes_HUPHM_monitoring>;
+        rr:joinCondition [
+            rr:child "status";
+            rr:parent "status";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:deathDate;
+        rr:objectMap [
+        rml:reference "date_death";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:lastMonitoringDate;
+        rr:objectMap [
+        rml:reference "date_last_contact";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasCauseOfDeath;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub11bL166C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/CauseOfDeath_lc_clinical_notes_HUPHM_monitoring>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/monitoring_lc_clinical_notes_HUPHM_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_HUPHM_ub11bL129C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "death_cause"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/CauseOfDeath"
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_monitoring>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/monitoring_lc_clinical_notes_HUPHM_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasMonitoring;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/StatusEvolution_lc_clinical_notes_HUPHM_monitoring>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        ]
+    ].
+
+<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/NonCancer_CauseOfDeath_lc_clinical_notes_HUPHM_monitoring>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/monitoring_lc_clinical_notes_HUPHM_PROJECT5.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_HUPHM_ub11bL166C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/CauseOfDeath"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "noncancer_cause"
+        ]
+    ].
+

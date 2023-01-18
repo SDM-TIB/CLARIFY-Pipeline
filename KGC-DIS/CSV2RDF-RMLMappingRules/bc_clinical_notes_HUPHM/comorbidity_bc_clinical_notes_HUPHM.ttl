@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <BCPatient_bc_clinical_notes_HUPHM_comorbidity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -41,7 +41,7 @@
 
 
 <positive_negative_bc_clinical_notes_HUPHM_comorbidity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <positive_negative_Function_bc_clinical_notes_HUPHM_comorbidity> ;
@@ -61,7 +61,7 @@
 	].
 	
 <Disorder_bc_clinical_notes_HUPHM_comorbidity>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+	rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap <Comorbidity_name_Function_bc_clinical_notes_HUPHM_comorbidity> ;
@@ -81,7 +81,7 @@
 	].
 
 <smoking_habit_bc_clinical_notes_HUPHM_comorbidity>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <smoking_habit_Function_bc_clinical_notes_HUPHM_comorbidity> ;
@@ -106,7 +106,7 @@
 
 <positive_negative_Function_bc_clinical_notes_HUPHM_comorbidity>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -143,7 +143,7 @@
 
 <Comorbidity_name_Function_bc_clinical_notes_HUPHM_comorbidity>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -180,7 +180,7 @@
 
 <smoking_habit_Function_bc_clinical_notes_HUPHM_comorbidity>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/comorbidity.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/comorbidity.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

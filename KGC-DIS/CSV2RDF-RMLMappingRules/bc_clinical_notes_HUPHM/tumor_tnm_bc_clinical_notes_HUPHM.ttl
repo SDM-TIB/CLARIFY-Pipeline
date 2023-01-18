@@ -13,7 +13,7 @@
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
 <BCPatient_tumor_grade_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_grade.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_grade.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -28,7 +28,7 @@
     ].
 
 <BCPatient_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -53,7 +53,7 @@
 
 
 <TNM_assessment_diagnosis_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -89,7 +89,7 @@
     ]. 
 
 <TNM_Stage_diagnosis_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -122,7 +122,7 @@
     ].
 
 <Diagnosis_TNM_TumorSize_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <Diagnosis_TNM_TumorSize_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -147,7 +147,7 @@
     ].
 
 <Diagnosis_TNM_LymphNodesInvolvement_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <Diagnosis_TNM_LymphNodesInvolvement_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -171,7 +171,7 @@
     ].
 
 <Diagnosis_TNM_MetastatisStage_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <Diagnosis_TNM_MetastatisStage_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -193,7 +193,7 @@
 ##### After Neoadjuvant #######
 
 <TNM_assessment_NeoadjuvantTherapy_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -229,7 +229,7 @@
     ]. 
 
 <TNM_Stage_NeoadjuvantTherapy_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
@@ -262,7 +262,7 @@
     ].
 
 <NeoadjuvantTherapy_TNM_TumorSize_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <NeoadjuvantTherapy_TNM_TumorSize_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -286,7 +286,7 @@
     ].
 
 <NeoadjuvantTherapy_TNM_LymphNodesInvolvement_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <NeoadjuvantTherapy_TNM_LymphNodesInvolvement_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -310,7 +310,7 @@
     ].
 
 <NeoadjuvantTherapy_TNM_MetastatisStage_bc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+    rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap <NeoadjuvantTherapy_TNM_MetastatisStage_Function_bc_clinical_notes_HUPHM_tnm_stadification> ;
@@ -338,7 +338,7 @@
 
 <Diagnosis_TNM_TumorSize_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -375,7 +375,7 @@
 
 <Diagnosis_TNM_LymphNodesInvolvement_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -412,7 +412,7 @@
 
 <Diagnosis_TNM_MetastatisStage_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -451,7 +451,7 @@
     rr:termType rr:Literal;
 
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -490,7 +490,7 @@
     rr:termType rr:Literal;
 
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -530,7 +530,7 @@
 
 <NeoadjuvantTherapy_TNM_TumorSize_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -567,7 +567,7 @@
 
 <NeoadjuvantTherapy_TNM_LymphNodesInvolvement_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -604,7 +604,7 @@
 
 <NeoadjuvantTherapy_TNM_MetastatisStage_Function_bc_clinical_notes_HUPHM_tnm_stadification>
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -643,7 +643,7 @@
     rr:termType rr:Literal;
 
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [
@@ -682,7 +682,7 @@
     rr:termType rr:Literal;
 
     fnml:functionValue [
-        rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
+        rml:logicalSource [ rml:source "/data/bc_clinical_notes_HUPHM/tumor_tnm_join_diagnosis_and_neoadjuvant_date.csv";
         rml:referenceFormulation ql:CSV 
                             ];
         rr:predicateObjectMap [

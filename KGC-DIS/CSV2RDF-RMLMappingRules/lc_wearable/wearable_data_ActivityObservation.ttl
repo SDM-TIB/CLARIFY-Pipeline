@@ -16,7 +16,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <LCPatient_lc_wearable_wearable_data_LightExposureObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -106,7 +106,7 @@
 ######## Average Activity ##########
 
 <ActivityObservation_AverageActivity_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -133,7 +133,7 @@
 	].
 
 <AverageActivity_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -151,7 +151,7 @@
 ######## Daily Activity Intensity Mean ##########
 
 <ActivityObservation_DailyActivityIntensityMean_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -178,7 +178,7 @@
 	].
 
 <DailyActivityIntensityMean_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -202,7 +202,7 @@
 ######## Wakefulness Intensity ##########
 
 <ActivityObservation_WakefulnessIntensity_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -229,7 +229,7 @@
 	].
 
 <WakefulnessIntensity_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -253,7 +253,7 @@
 ######## Mean Movement time ##########
 
 <ActivityObservation_MeanMovementTime_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -280,7 +280,7 @@
 	].
 
 <MeanMovementTime_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -304,7 +304,7 @@
 ######## Wakefulness Duration ##########
 
 <ActivityObservation_WakefulnessDuration_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -331,7 +331,7 @@
 	].
 
 <WakefulnessDuration_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -355,7 +355,7 @@
 ######## Movement Regularity ##########
 
 <ActivityObservation_MovementRegularity_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -382,7 +382,7 @@
 	].
 
 <MovementRegularity_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -400,7 +400,7 @@
 ######## Sedentary Indicator ##########
 
 <ActivityObservation_SedentaryIndicator_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -427,7 +427,7 @@
 	].
 
 <SedentaryIndicator_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -445,7 +445,7 @@
 ######## Activity Indicator ##########
 
 <ActivityObservation_ActivityIndicator_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -472,7 +472,7 @@
 	].
 
 <ActivityIndicator_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -490,7 +490,7 @@
 ######## Sedentary Percentage ##########
 
 <ActivityObservation_SedentaryPercentage_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -517,7 +517,7 @@
 	].
 
 <SedentaryPercentage_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -535,7 +535,7 @@
 ######## Light Activity Percentage ##########
 
 <ActivityObservation_LightActivityPercentage_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -562,7 +562,7 @@
 	].
 
 <LightActivityPercentage_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -580,7 +580,7 @@
 ######## Moderate Activity Percentage ##########
 
 <ActivityObservation_ModerateActivityPercentage_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -607,7 +607,7 @@
 	].
 
 <ModerateActivityPercentage_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -625,7 +625,7 @@
 ######## Vigorous Activity Percentage ##########
 
 <ActivityObservation_VigorousActivityPercentage_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -652,7 +652,7 @@
 	].
 
 <VigorousActivityPercentage_value_unit_lc_wearable_wearable_data_ActivityObservation>
-	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_wearable/wearable_data_ActivityObservation.csv";
+	rml:logicalSource [ rml:source "/data/lc_wearable/wearable_data_ActivityObservation.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
