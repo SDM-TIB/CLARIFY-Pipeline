@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-config_dir=/data/configs/
+config_dir=/data/configs
 cd /data/configs
 for entry in "$config_dir"/*
 do
