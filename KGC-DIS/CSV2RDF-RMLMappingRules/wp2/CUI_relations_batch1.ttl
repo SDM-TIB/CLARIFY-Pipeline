@@ -7,16 +7,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
+@prefix clarify: <http://clarify2020.eu/vocab/> .
 
 <Relations_Publication_wp2>
 
-	rml:logicalSource [ rml:source "/data/wp2/wp4_tuples_0.50.15032022.json";
+	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/wp4_tuples_0.50.15032022.json";
 						rml:referenceFormulation ql:JSONPath;
 						rml:iterator "$.relations.source" 
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/publication_{articleids[*].pubmed}";
+		rr:template "http://clarify2020.eu/entity/publication_{articleids[*].pubmed}";
 		rr:class clarify:Publication
 	];
 	rr:predicateObjectMap [
@@ -40,29 +40,29 @@
 
 <Annotations_Relations_wp2>
 
-	rml:logicalSource [ rml:source "/data/wp2/wp4_tuples_0.50.15032022.json";
+	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/wp4_tuples_0.50.15032022.json";
 						rml:referenceFormulation ql:JSONPath;
 						rml:iterator "$.relations" 
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/{subject}_{predicate}_{object}";
+		rr:template "http://clarify2020.eu/entity/{subject}_{predicate}_{object}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [ 
-			rr:template "http://research.tib.eu/clarify2020/vocab/{predicate}"
+			rr:template "http://clarify2020.eu/vocab/{predicate}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_subject_annotation;
 		rr:objectMap [
-			rr:template "http://research.tib.eu/clarify2020/entity/{subject}"
+			rr:template "http://clarify2020.eu/entity/{subject}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_object_annotation;
 		rr:objectMap [
-			rr:template "http://research.tib.eu/clarify2020/entity/{object}"
+			rr:template "http://clarify2020.eu/entity/{object}"
 		]
 	];
 	rr:predicateObjectMap [
@@ -74,7 +74,7 @@
 	rr:predicateObjectMap [
 		rr:predicate prov:has_provenance;
 		rr:objectMap [
-			rr:constant "http://research.tib.eu/clarify2020/entity/WP2_UCL"
+			rr:constant "http://clarify2020.eu/entity/WP2_UCL"
 		]
 	];
 	rr:predicateObjectMap [

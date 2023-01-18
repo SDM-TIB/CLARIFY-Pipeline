@@ -10,48 +10,68 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix clarifyFun: <http://clarify2020.eu/function/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
+@prefix clarify: <http://clarify2020.eu/vocab/> .
 
-<Subject_Relation_Object_CUI_relations_batch2>
-	rml:logicalSource [ rml:source "/data/wp2/gold_triples_with_sources.csv";
+<Subject_Relation_Object_CUI_relations_batch2_gold>
+	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/gold_triples_with_sources.csv";
 						rml:referenceFormulation ql:CSV 
 						];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{subject_cui}_{relationship}_{object_cui}";
+        rr:template "http://clarify2020.eu/entity/{subject_cui}_{relationship_id}_{object_cui}";
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-            rr:template "http://research.tib.eu/clarify2020/vocab/{relationship}"
+            rr:template "http://clarify2020.eu/vocab/GoldRelation"
         ]
     ];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_subject_annotation;
 		rr:objectMap [
-			rr:template "http://research.tib.eu/clarify2020/entity/{subject_cui}"
+			rr:template "http://clarify2020.eu/entity/{subject_cui}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:relation_isRelatedTo_object_annotation;
 		rr:objectMap [
-			rr:template "http://research.tib.eu/clarify2020/entity/{object_cui}"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate clarify:relation_isRelatedTo_id;
-		rr:objectMap [
-			rr:template "http://research.tib.eu/clarify2020/entity/{relationship_id}"
+			rr:template "http://clarify2020.eu/entity/{object_cui}"
 		]
 	];
     rr:predicateObjectMap [
         rr:predicate clarify:relation_isRelatedTo_source;
         rr:objectMap [
-            rr:template "http://research.tib.eu/clarify2020/entity/{relationship_source}"
+            rr:template "http://clarify2020.eu/entity/{relationship_source}"
         ]
     ];
 	rr:predicateObjectMap [
 		rr:predicate prov:has_provenance;
 		rr:objectMap [
-			rr:constant "http://research.tib.eu/clarify2020/entity/UMLS_WP2_UCL"
+			rr:constant "http://clarify2020.eu/entity/UMLS_WP2_UCL"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate clarify:hasRelationID;
+		rr:objectMap [ 
+			rr:parentTriplesMap <Relation_Semantic_CUI_relations_batch2_gold>
+		]
+	].		
+
+<Relation_Semantic_CUI_relations_batch2_gold>
+	rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/wp2/gold_triples_with_sources.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+    rr:subjectMap [
+        rr:template "http://clarify2020.eu/entity/{relationship_id}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+            rr:template "http://clarify2020.eu/vocab/SemanticRelation"
+        ]
+    ];
+	rr:predicateObjectMap [
+		rr:predicate clarify:relationLabel;
+		rr:objectMap [
+			rml:reference "relationship_label"
 		]
 	].
