@@ -130,37 +130,37 @@
 					WHERE id_KH is not Null and id_HUPHM is not null and id_SLCG=""""";
 		];
 	rr:subjectMap [
-		rr:template "http://clarify2020.eu/entity/{id_KH}_{id_HUPHM}";
+		rr:template "http://research.tib.eu/clarify2020/entity/{id_KH}_{id_HUPHM}";
 		rr:class clarify:LCPatient;
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [
-			rr:constant "http://clarify2020.eu/vocab/CPatient"
+			rr:constant "http://research.tib.eu/clarify2020/vocab/CPatient"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:has_LC_KH_ID;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/{id_KH}"
+			rr:template "http://research.tib.eu/clarify2020/entity/{id_KH}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:has_LC_HUPHM_ID;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/HUPHM_{id_HUPHM}"
+			rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{id_HUPHM}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:belongsTo;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/{category}";
+			rr:template "http://research.tib.eu/clarify2020/entity/{category}";
 		] 
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:deathDate;
 		rr:objectMap [
-			rr:template "http://clarify2020.eu/entity/{Date of death}"
+			rr:template "http://research.tib.eu/clarify2020/entity/{Date of death}"
 		]
 	].
 
