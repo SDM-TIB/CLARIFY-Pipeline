@@ -98,7 +98,7 @@
         rr:predicateObjectMap [
             rr:predicate clarifyFun:resource;
             rr:objectMap [ 
-                rr:constant "http://clarify2020.eu/entity" 
+                rr:constant "http://research.tib.eu/clarify2020/entity" 
             ]
         ];   
         rr:predicateObjectMap [
