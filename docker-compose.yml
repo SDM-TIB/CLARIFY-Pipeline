@@ -28,7 +28,7 @@ services:
       
 
   clarifykg:
-    image: kemele/virtuoso:6-stable
+    image: kemele/virtuoso:7-stable
     hostname: clarifykg
     container_name: clarifykg
     domainname: clarify
@@ -42,7 +42,7 @@ services:
       - clarify
       
   clarify_mappings:
-    image: kemele/virtuoso:6-stable
+    image: kemele/virtuoso:7-stable
     hostname: clarify_mappings
     container_name: clarify_mappings
     domainname: clarify
