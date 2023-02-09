@@ -17,7 +17,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{ehr}";
+		rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
 		rr:class clarify:BCPatient
 	];
 	rr:predicateObjectMap [
@@ -156,7 +156,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{ehr}_OncologicalTL_1";
+		rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}_OncologicalTL_1";
 		rr:class clarify:OncologicalTreatmentLine
 	];
 	rr:predicateObjectMap [
