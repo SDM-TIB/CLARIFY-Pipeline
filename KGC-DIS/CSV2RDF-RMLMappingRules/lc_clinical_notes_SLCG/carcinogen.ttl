@@ -72,13 +72,13 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasCarcinogenExposure;
         rr:objectMap [
-        rml:reference "exposure_contact_absentos_translated"
+        rr:template "http://research.tib.eu/clarify2020/entity/{exposure_contact_absentos_translated}";
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasCarcinogenAsbestos;
         rr:objectMap [
-        rml:reference "absentos_exposure_type_translated"
+        rr:template "http://research.tib.eu/clarify2020/entity/{absentos_exposure_type_translated}";
         ]
     ].
     
