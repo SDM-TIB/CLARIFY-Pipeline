@@ -1556,6 +1556,15 @@
 							dcterms:modified "2021-05-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+
+<http://research.tib.eu/clarify2020/vocab/hasProteinName>	rdf:type owl:DatatypeProperty;	
+							rdfs:label	"hasProteinName";
+							rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Protein>;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "The name of Protein.";
+							dcterms:modified "2023-04-25"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 <http://research.tib.eu/clarify2020/vocab/biomarkerAnalysisDate>	rdf:type owl:DatatypeProperty;	
 								rdfs:label	"biomarkerAnalysisDate";
 								rdfs:domain	<http://research.tib.eu/clarify2020/vocab/CPatient>;
@@ -2449,6 +2458,7 @@
 							rdfs:comment	"Connect the biomarker to the indication of performed study.";
 							dcterms:modified "2021-04-07"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 <http://research.tib.eu/clarify2020/vocab/hasNegativeTestResult>	rdf:type owl:ObjectProperty;	
 								rdfs:label	"hasNegativeTestResult";
