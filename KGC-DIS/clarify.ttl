@@ -161,6 +161,20 @@
 						dcterms:modified "2020-10-20"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+<http://research.tib.eu/clarify2020/vocab/Carcinogen>	rdf:type	owl:Class;
+						rdfs:label	"Carcinogen";
+						rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:comment "A carcinogen is a substance, organism or agent capable of causing lung cancer.";
+						dcterms:modified "2023-04-25"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/PTNMdiagnosis>	rdf:type	owl:Class;
+						rdfs:label	"PTNMdiagnosis";
+						rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:comment "Pathological tumor-node-metastasis (pTNM) staging for papillary and follicular thyroid carcinomas.";
+						dcterms:modified "2023-04-25"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 <http://research.tib.eu/clarify2020/vocab/OccurrenceLocation>	rdf:type	owl:Class;
 							rdfs:label	"OccurrenceLocation";
 							rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
