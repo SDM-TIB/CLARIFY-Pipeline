@@ -89,7 +89,7 @@ services:
     
           
   clarify_detrusty:
-    image: sdmtib/detrusty:0.7.2
+    image: sdmtib/detrusty:0.12.0
     hostname: detrusty
     container_name: clarify_detrusty
     domainname: clarify
