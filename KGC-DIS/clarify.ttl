@@ -1522,6 +1522,77 @@
 					dcterms:modified "2020-10-21"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogenYears>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"hasCarcinogenYears";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Carcinogen>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The year of Carcinogen.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/electronicCigarettesPerDay>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"electronicCigarettesPerDay";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The number of electronic cigarettes per day that the patient smokes.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/electronicCigaretteStartDate>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"electronicCigaretteStartDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the starting date of the electronic cigarettes that the patient smokes.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+<http://research.tib.eu/clarify2020/vocab/electronicCigaretteEndingDate>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"electronicCigaretteEndingDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the ending date of the electronic cigarettes that the patient smokes.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/registrationDate>	               rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"registrationDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the registration date in the hospital.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+<http://research.tib.eu/clarify2020/vocab/signatureConsentDate>	          rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"signatureConsentDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the signature of consent date of the patient.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/rollingTobaccoStartDate>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"rollingTobaccoStartDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the starting date of the rolling tobacco that the patient smokes.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/rollingTobaccoEndingDate>	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"rollingTobaccoEndingDate";
+									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Represents the ending date of the rolling tobacco that the patient smokes.";
+									dcterms:modified "2023-05-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasProteinName>	rdf:type owl:DatatypeProperty;
+					rdfs:label	"hasProteinName";
+					rdfs:domain <http://research.tib.eu/clarify2020/vocab/Protein>;
+					rdfs:range rdfs:Literal;
+					rdfs:comment	"KEGG Uniprot Accession key for protein.";
+					dcterms:modified "2023-05-12"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 <http://research.tib.eu/clarify2020/vocab/numberOfCigarettesPerDay>	rdf:type	owl:DatatypeProperty;	
 									rdfs:label	"numberOfCigarettesPerDay";
 									rdfs:domain	<http://research.tib.eu/clarify2020/vocab/CPatient>;
@@ -2197,6 +2268,149 @@
 				dcterms:modified "2020-11-16"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogen>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasCarcinogen";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Carcinogen>;
+						rdfs:comment "Associates a cancer patient with the Carcinogen.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogenCityContact>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasCarcinogenCityContact";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Carcinogen>;
+						rdfs:comment "Associates a cancer patient with the city of contact the Carcinogen.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.						
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogenType>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasCarcinogenType";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Carcinogen>;
+						rdfs:comment "Associates a cancer patient with the type of Carcinogen.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogenExposure>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasCarcinogenExposure";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with Carcinogen Exposure.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasCarcinogenAsbestos>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasCarcinogenAsbestos";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with Carcinogen Asbestos.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.	
+
+<http://research.tib.eu/clarify2020/vocab/hasPTNMdiagnosisType>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasPTNMdiagnosisType";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with ptnm diagnosis type.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/ptnmDiagnosisType>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"ptnmDiagnosisType";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/PTNMdiagnosis>;
+						rdfs:comment "Associates a cancer patient and ptnm with diagnosis type.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.	
+
+<http://research.tib.eu/clarify2020/vocab/hasElectronicCigarettes>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasElectronicCigarettes";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with Electronic Cigarettes.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.	
+
+<http://research.tib.eu/clarify2020/vocab/hasRollingTobacco>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasRollingTobacco";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with Rolling Tobacco.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.	
+
+<http://research.tib.eu/clarify2020/vocab/hasBiopsy>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasBiopsy";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with biopsy.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasBronchoscopy>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasBronchoscopy";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with bronchoscopy.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasEBUS>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasEBUS";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with EBUS.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.												
+<http://research.tib.eu/clarify2020/vocab/hasLaparoscopy>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasLaparoscopy";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with laparoscopy.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasMediastinoscopy>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasMediastinoscopy";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with mediastinoscopy.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.	
+
+<http://research.tib.eu/clarify2020/vocab/hasOccupation>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasOccupation";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/LCPatient>;
+						rdfs:comment "Associates a cancer patient with his/her occupation.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+
+<http://research.tib.eu/clarify2020/vocab/hasProteinType>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasProteinType";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Protein>;
+						rdfs:comment "Represnt the type of protein.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasSymbol>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasSymbol";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Protein>;
+						rdfs:comment "Represent the symbol of protein.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
+<http://research.tib.eu/clarify2020/vocab/hasRelationship>	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasRelationship";
+						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:range	<http://research.tib.eu/clarify2020/vocab/Protein>;
+						rdfs:comment "Represent the relationships between proteins.";
+						dcterms:modified "2023-05-12"^^xsd:date;						
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+						
 <http://research.tib.eu/clarify2020/vocab/hasBiomarker>	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasBiomarker";
 						rdfs:domain	<http://research.tib.eu/clarify2020/vocab/Concept>;
