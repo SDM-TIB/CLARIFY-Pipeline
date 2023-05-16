@@ -19,6 +19,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+			    rr:class clarify:LCPatient;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:age;
