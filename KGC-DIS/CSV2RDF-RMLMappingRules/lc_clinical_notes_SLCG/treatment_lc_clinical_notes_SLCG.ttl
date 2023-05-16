@@ -12,7 +12,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<LCPatient_lc_clinical_notes_SLCG_diagnosis>
+<LCPatient_lc_clinical_notes_SLCG_OncologicalTreatment_Surgery>
 	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery.csv";
 						rml:referenceFormulation ql:CSV;
 						];
@@ -24,5 +24,35 @@
         rr:predicate clarify:hasOncologicalTreatment;
         rr:objectMap [
             rr:template "http://research.tib.eu/clarify2020/entity/{specify_surgery_class}";
+        ]
+    ].
+
+<LCPatient_lc_clinical_notes_SLCG_OncologicalTreatment_Radiotherapy>
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/radiotherapy_treatment_line.csv";
+						rml:referenceFormulation ql:CSV;
+						];
+	rr:subjectMap [
+		rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
+	];
+	rr:predicateObjectMap [
+        rr:predicate clarify:hasOncologicalTreatment;
+        rr:objectMap [
+            rr:template "http://research.tib.eu/clarify2020/entity/{specify_radiotherapy_type}";
+        ]
+    ].
+
+<LCPatient_lc_clinical_notes_SLCG_OncologicalTreatment_Chemotherapy>
+	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/chemotherapy_treatment_line.csv";
+						rml:referenceFormulation ql:CSV;
+						];
+	rr:subjectMap [
+		rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
+	];
+	rr:predicateObjectMap [
+        rr:predicate clarify:hasOncologicalTreatment;
+        rr:objectMap [
+            rr:template "http://research.tib.eu/clarify2020/entity/{specify_type}";
         ]
     ].
