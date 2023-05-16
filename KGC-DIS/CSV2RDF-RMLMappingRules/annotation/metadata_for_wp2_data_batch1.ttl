@@ -20,6 +20,7 @@
             ];
   rr:subjectMap [
     rr:template "http://research.tib.eu/clarify2020/vocab/{Relation_WP2_UCL}";
+                rr:class clarify:SemanticRelation;
   ];
   rr:predicateObjectMap [
     rr:predicate agrelon:correspondsToInverse;
@@ -34,6 +35,7 @@
             ];
   rr:subjectMap [
     rr:template "http://research.tib.eu/clarify2020/vocab/{Relation_WP2_UCL}";
+                 rr:class clarify:SemanticRelation;
   ];
   rr:predicateObjectMap [
     rr:predicate ov:similarTo;
@@ -48,6 +50,7 @@
             ];
   rr:subjectMap [
     rr:template "http://research.tib.eu/clarify2020/vocab/{Relation_WP2_UCL}";
+                 rr:class clarify:SemanticRelation;
   ];
   rr:predicateObjectMap [
     rr:predicate owl:sameAs;
@@ -62,6 +65,7 @@
             ];
   rr:subjectMap [
     rr:template "http://research.tib.eu/clarify2020/vocab/{Relation_WP2_UCL}";
+                 rr:class clarify:SemanticRelation;
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:subClassOf;
