@@ -19,6 +19,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{Comorbidity}";
+			    rr:class clarify:Comorbidity;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:hasCUIAnnotation;
@@ -33,6 +34,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{CUI}";
+			    rr:class clarify:Annotation;
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
