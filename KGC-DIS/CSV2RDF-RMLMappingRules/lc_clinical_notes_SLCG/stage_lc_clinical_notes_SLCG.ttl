@@ -12,7 +12,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<LCPatient_lc_clinical_notes_SLCG_diagnosis>
+<LCPatient_lc_clinical_notes_SLCG_diagnosis_stage>
 	rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/diagnosis.csv";
 						rml:referenceFormulation ql:CSV;
 						];
