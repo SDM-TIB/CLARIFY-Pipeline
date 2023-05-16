@@ -224,6 +224,13 @@
 					dcterms:modified "2020-10-21"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+<http://research.tib.eu/clarify2020/vocab/Comorbidity>	rdf:type	owl:Class;
+							rdfs:label	"Comorbidity";
+							rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
+							rdfs:comment "Represents the comorbidity in patients.";
+							dcterms:modified "2023-05-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 <http://research.tib.eu/clarify2020/vocab/ComorbidityStatus>	rdf:type	owl:Class;
 							rdfs:label	"ComorbidityStatus";
 							rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
