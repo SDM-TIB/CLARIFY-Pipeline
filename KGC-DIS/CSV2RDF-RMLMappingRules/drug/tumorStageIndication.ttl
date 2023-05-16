@@ -14,6 +14,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/Stage{stage}";
+			    rr:class clarify:Diagnosis;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:cancerStage_has_indication;
