@@ -100,7 +100,9 @@ services:
     networks:
       - clarify
     depends_on:
-      - clarifykg
+      - clarifykg 
+    environment:
+      JOIN_STARS_LOCALLY: "False"
 
 networks:
   clarify:
