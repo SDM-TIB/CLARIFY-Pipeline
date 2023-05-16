@@ -59,8 +59,8 @@
 								dcterms:modified "2021-12-16"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-<http://research.tib.eu/clarify2020/vocab/AnnotationType>	rdf:type	owl:Class;
-						rdfs:label	"AnnotationType";
+<http://research.tib.eu/clarify2020/vocab/Annotation>	rdf:type	owl:Class;
+						rdfs:label	"Annotation";
 						rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
 						rdfs:comment "Represents the type of the UMLS CUI.";
 						dcterms:modified "2021-12-16"^^xsd:date;
