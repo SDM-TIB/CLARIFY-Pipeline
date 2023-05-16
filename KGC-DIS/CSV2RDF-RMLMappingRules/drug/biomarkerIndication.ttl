@@ -14,6 +14,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{biomarker}";
+			    rr:class clarify:Biomarker;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:biomarker_has_indication;
