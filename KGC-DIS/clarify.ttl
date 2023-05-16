@@ -38,6 +38,13 @@
 				dcterms:modified "2021-12-29"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+<http://research.tib.eu/clarify2020/vocab/SemanticRelation>	rdf:type	owl:Class;
+						rdfs:label	"SemanticRelation";
+						rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
+						rdfs:comment "Represents the Semantic relations provided by UMLS.";
+						dcterms:modified "2023-05-16"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 <http://research.tib.eu/clarify2020/vocab/SemanticType>	rdf:type	owl:Class;
 						rdfs:label	"SemanticType";
 						rdfs:subClassOf	<http://research.tib.eu/clarify2020/vocab/Concept>;
