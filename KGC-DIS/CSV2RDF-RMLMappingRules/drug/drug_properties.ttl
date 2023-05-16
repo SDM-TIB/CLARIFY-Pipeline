@@ -15,6 +15,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{Drug_id}";
+			    rr:class clarify:Drug;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:drugAbsorption;
@@ -29,6 +30,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{Drug_id}";
+			    rr:class clarify:Drug;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:drugsMechanismOfAction;
