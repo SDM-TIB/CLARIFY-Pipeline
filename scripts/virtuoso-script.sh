@@ -12,7 +12,7 @@ filetype=$7
 dumpstrip="ld_dir('$outputfolder', '*.$filetype', '$virtuosoGraph');"
 
 echo "ld_dir('$outputfolder', '*.$filetype', '$virtuosoGraph');" >> load_data.sql
-echo "rdf_loader_run(log_enable=2);" >> load_data.sql
+echo "rdf_loader_run(log_enable=>2);" >> load_data.sql
 echo "exec('checkpoint');" >> load_data.sql
 echo "WAIT_FOR_CHILDREN; " >> load_data.sql
 cat load_data.sql
