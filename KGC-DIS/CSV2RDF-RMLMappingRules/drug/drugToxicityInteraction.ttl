@@ -29,7 +29,8 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/{drug_id}"
+		rr:template "http://research.tib.eu/clarify2020/entity/{drug_id}";
+			    rr:class clarify:Drug;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:drug_isRelatedTo_dse;
@@ -43,7 +44,8 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/{toxicity_Label}"
+		rr:template "http://research.tib.eu/clarify2020/entity/{toxicity_Label}";
+			    rr:class clarify:Phenotype;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:sideEffect_isRelatedTo_dse;
