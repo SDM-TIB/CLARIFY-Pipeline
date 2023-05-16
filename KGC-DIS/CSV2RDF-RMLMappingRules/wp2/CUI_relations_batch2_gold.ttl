@@ -18,6 +18,7 @@
 						];
     rr:subjectMap [
         rr:template "http://research.tib.eu/clarify2020/entity/{subject_cui}_{relationship_id}_{object_cui}";
+		    rr:class clarify:Annotation;
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
@@ -62,6 +63,7 @@
 						];
     rr:subjectMap [
         rr:template "http://research.tib.eu/clarify2020/entity/{relationship_id}";
+		    rr:class clarify:SemanticRelation;
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
