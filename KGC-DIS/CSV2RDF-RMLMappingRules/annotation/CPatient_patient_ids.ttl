@@ -26,7 +26,8 @@
 		];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{LC_SLCG_EHR}";
-		rr:class clarify:LCPatient;
+		rr:class clarify:LCPatient,
+			    clarify:CPatient;
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
@@ -270,7 +271,8 @@
 		];
 	rr:subjectMap [
 		rr:template "http://research.tib.eu/clarify2020/entity/{BC_HUPHM_EHR}";
-		rr:class clarify:CPatient;
+		rr:class clarify:CPatient,
+			 clarify:BCPatient;
 	];
 	rr:predicateObjectMap [
 		rr:predicate clarify:has_LC_HUPHM_ID;
