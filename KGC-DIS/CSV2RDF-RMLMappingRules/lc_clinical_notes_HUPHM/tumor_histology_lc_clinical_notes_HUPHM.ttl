@@ -27,7 +27,7 @@
         ]
     ]. 
 <TumorHistologyAssessment_lc_clinical_notes_HUPHM_tnm_stadification>
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_SLCG/tumor_histology_join_diagnosis_date.csv";
+    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/data/lc_clinical_notes_HUPHM/tumor_histology_join_diagnosis_date.csv";
                         rml:referenceFormulation ql:CSV;
                         ];
     rr:subjectMap [
