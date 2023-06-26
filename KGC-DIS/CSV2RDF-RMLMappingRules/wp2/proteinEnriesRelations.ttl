@@ -11,7 +11,7 @@
 
 <ProteinEnries>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "./data/hsa-entry.csv";
+    rml:logicalSource [ rml:source "./data/wp2/hsa-entry.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -43,7 +43,7 @@
 
 <KeggUniprot>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "./data/KEGG-to-Uniprot.csv";
+    rml:logicalSource [ rml:source "./data/wp2/KEGG-to-Uniprot.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -66,7 +66,7 @@
 
 <ProteinRelations>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "./data/hsa-relation.csv";
+    rml:logicalSource [ rml:source "./data/wp2/hsa-relation.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
