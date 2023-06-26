@@ -12,31 +12,29 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/study_performed_lc_clinical_notes_HUPHM_pdl1_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_pdl1_expression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_ub14bL146C24";
-        rr:termType rr:IRI
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate rdf:type;
+        rr:predicate clarify:hasBiomarker;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "study_performed"
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_pdl1_expression>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_pdl1_expression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_pdl1_expression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -47,6 +45,13 @@
         rr:predicate clarify:biomarker;
         rr:objectMap [
         rr:constant "http://research.tib.eu/clarify2020/entity/PDL1"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTestResult;
+        rr:objectMap [
+        rml:reference "findSemantic_ub14bL109C24";
+        rr:termType rr:IRI
         ]
     ];
     rr:predicateObjectMap [
@@ -61,18 +66,11 @@
         rml:reference "findSemantic_ub14bL146C24";
         rr:termType rr:IRI
         ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTestResult;
-        rr:objectMap [
-        rml:reference "findSemantic_ub14bL109C24";
-        rr:termType rr:IRI
-        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/BiomarkerResult_lc_clinical_notes_HUPHM_pdl1_expression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/BiomarkerResult_lc_clinical_notes_HUPHM_pdl1_expression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -92,23 +90,25 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_pdl1_expression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/study_performed_lc_clinical_notes_HUPHM_pdl1_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/pdl1_expression_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
-        rr:class clarify:LCPatient
+        rml:reference "findSemantic_ub14bL146C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasBiomarker;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_pdl1_expression>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
+        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "study_performed"
         ]
     ].
 

@@ -12,31 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Scale_lc_clinical_notes_SLCG_performance_status>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_performance_status>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/performance_status_lc_clinical_notes_SLCG_PROJECT1.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub22bL119C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Scale"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "scale"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_performance_status>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/performance_status_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//performance_status_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -51,9 +29,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/PerformanceStatus_lc_clinical_notes_SLCG_performance_status>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/PerformanceStatus_lc_clinical_notes_SLCG_performance_status>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/performance_status_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//performance_status_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -77,6 +55,28 @@
         rr:objectMap [
         rml:reference "findSemantic_ub22bL119C24";
         rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Scale_lc_clinical_notes_SLCG_performance_status>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//performance_status_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub22bL119C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Scale"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "scale"
         ]
     ].
 

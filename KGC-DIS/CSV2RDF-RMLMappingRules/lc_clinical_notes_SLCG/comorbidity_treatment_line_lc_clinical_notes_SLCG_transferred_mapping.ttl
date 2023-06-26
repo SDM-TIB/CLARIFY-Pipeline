@@ -12,9 +12,70 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Disorder_lc_clinical_notes_SLCG_comorbidity_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_comorbidity_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasComorbidityTreatmentLine;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/ComorbidityTreatmentLine_lc_clinical_notes_SLCG_comorbidity_treatment_line>;
+        rr:joinCondition [
+            rr:child "ehr";
+            rr:parent "ehr";
+        ];
+        rr:joinCondition [
+            rr:child "treatment_line";
+            rr:parent "treatment_line";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/ComorbidityTreatmentLine_lc_clinical_notes_SLCG_comorbidity_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_ComorbidityTL_{treatment_line}";
+        rr:class clarify:ComorbidityTreatmentLine
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentLineNumber;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_comorbidity_treatment_line>;
+        rr:joinCondition [
+            rr:child "treatment_line";
+            rr:parent "treatment_line";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentLineSymptom;
+        rr:objectMap [
+        rml:reference "findComorbidity_ub7bL85C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_comorbidity_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
+        rr:class clarify:TreatmentLineNumber
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Disorder_lc_clinical_notes_SLCG_comorbidity_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -31,67 +92,6 @@
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
         rml:reference "comorbidity"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_comorbidity_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}";
-        rr:class clarify:LCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasComorbidityTreatmentLine;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/ComorbidityTreatmentLine_lc_clinical_notes_SLCG_comorbidity_treatment_line>;
-        rr:joinCondition [
-            rr:child "ehr";
-            rr:parent "ehr";
-        ];
-        rr:joinCondition [
-            rr:child "treatment_line";
-            rr:parent "treatment_line";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_comorbidity_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
-        rr:class clarify:TreatmentLineNumber
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/ComorbidityTreatmentLine_lc_clinical_notes_SLCG_comorbidity_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/comorbidity_treatment_line_lc_clinical_notes_SLCG_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_ComorbidityTL_{treatment_line}";
-        rr:class clarify:ComorbidityTreatmentLine
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentLineNumber;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_comorbidity_treatment_line>;
-        rr:joinCondition [
-            rr:child "treatment_line";
-            rr:parent "treatment_line";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentLineSymptom;
-        rr:objectMap [
-        rml:reference "findComorbidity_ub7bL85C24";
-        rr:termType rr:IRI
         ]
     ].
 

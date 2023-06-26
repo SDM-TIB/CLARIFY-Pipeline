@@ -12,9 +12,68 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_tnm_stadification>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTNMstageAssessment;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_tnm_stadification>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_tnm_stadification>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_StageAssessment";
+        rr:class clarify:TNMstageAssessment
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:isAssessedDuring;
+        rr:objectMap [
+        rr:constant "Diagnosis"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:isAssessedOn;
+        rr:objectMap [
+        rml:reference "date";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasStage;
+        rr:objectMap [
+        rml:reference "stage"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTNMstage;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_tnm_stadification>;
+        rr:joinCondition [
+            rr:child "stage";
+            rr:parent "stage";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_tnm_stadification>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -22,9 +81,9 @@
         rr:class clarify:TNMstage
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:cancerStageTNM_Version;
+        rr:predicate clarify:cancerStageTNM_TumorSize;
         rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub21bL293C24";
+        rml:reference "findSemantic_HUPHM_ub21bL182C24";
         rr:termType rr:IRI
         ]
     ];
@@ -36,89 +95,45 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:cancerStageTNM_TumorSize;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub21bL182C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:cancerStageTNM_MetastatisStage;
         rr:objectMap [
         rml:reference "findSemantic_HUPHM_ub21bL256C24";
         rr:termType rr:IRI
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_version_lc_clinical_notes_HUPHM_tnm_stadification>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:cancerStageTNM_Version;
+        rr:objectMap [
         rml:reference "findSemantic_HUPHM_ub21bL293C24";
         rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "specify_tnm_version"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Version"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TumorSize_lc_clinical_notes_HUPHM_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TumorSize_lc_clinical_notes_HUPHM_tnm_stadification>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rml:reference "findSemantic_HUPHM_ub21bL182C24";
         rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "t"
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/TumorSize"
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/MetastatisStage_lc_clinical_notes_HUPHM_tnm_stadification>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_HUPHM_ub21bL256C24";
-        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rml:reference "m"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/MetastatisStage"
+        rml:reference "t"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LymphNodesInvolvement_lc_clinical_notes_HUPHM_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LymphNodesInvolvement_lc_clinical_notes_HUPHM_tnm_stadification>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -138,62 +153,47 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/MetastatisStage_lc_clinical_notes_HUPHM_tnm_stadification>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT6.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_StageAssessment";
-        rr:class clarify:TNMstageAssessment
+        rml:reference "findSemantic_HUPHM_ub21bL256C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:isAssessedOn;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rml:reference "date";
-        rr:datatype xsd:date;
+        rr:template  "http://research.tib.eu/clarify2020/vocab/MetastatisStage"
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTNMstage;
+        rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_tnm_stadification>;
-        rr:joinCondition [
-            rr:child "stage";
-            rr:parent "stage";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasStage;
-        rr:objectMap [
-        rml:reference "stage"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:isAssessedDuring;
-        rr:objectMap [
-        rr:constant "Diagnosis"
+        rml:reference "m"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_version_lc_clinical_notes_HUPHM_tnm_stadification>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT7.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tnm_stadification_lc_clinical_notes_HUPHM_PROJECT7.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
-        rr:class clarify:LCPatient
+        rml:reference "findSemantic_HUPHM_ub21bL293C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTNMstageAssessment;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_tnm_stadification>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Version"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "specify_tnm_version"
         ]
     ].
 

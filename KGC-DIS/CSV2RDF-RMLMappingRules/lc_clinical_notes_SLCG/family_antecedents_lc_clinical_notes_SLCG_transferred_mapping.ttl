@@ -12,14 +12,21 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_family_antecedents>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_family_antecedents>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//family_antecedents_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
         rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_familyWithCancer_OrNot;
+        rr:objectMap [
+        rml:reference "findSemantic_ub10bL68C24";
+        rr:termType rr:IRI
+        ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:numberOfFamilyWithLC;
@@ -34,18 +41,11 @@
         rml:reference "number_of_family_members_others";
         rr:datatype xsd:int;
         ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_familyWithCancer_OrNot;
-        rr:objectMap [
-        rml:reference "findSemantic_ub10bL68C24";
-        rr:termType rr:IRI
-        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/FamilyWithCancer_lc_clinical_notes_SLCG_family_antecedents>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/FamilyWithCancer_lc_clinical_notes_SLCG_family_antecedents>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/family_antecedents_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//family_antecedents_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [

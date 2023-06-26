@@ -12,97 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Exon21Result_lc_clinical_notes_HUPHM_egfr_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_egfr_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT1.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub6bL405C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "result_egfr_exon21"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/study_performed_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub6bL516C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "study_performed"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Exon19Result_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub6bL368C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "result_egfr_exon19"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/others_result_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub6bL479C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "result_egfr_others"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -112,7 +24,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasBiomarker;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_egfr_mutation>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_egfr_mutation>;
         rr:joinCondition [
             rr:child "EHR";
             rr:parent "EHR";
@@ -120,9 +32,81 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/BiomarkerNegativeResult_lc_clinical_notes_HUPHM_egfr_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_egfr_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_EGFR";
+        rr:class clarify:BiomarkerObservation
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:biomarker;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/entity/EGFR"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasNegativeTestResult;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL257C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_mutation_T790M_positive_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL294C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_mutation_T790M_negative_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL331C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_mutation_exon19_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL368C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_mutation_exon21_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL405C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_NOS_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL442C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_other_result;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL479C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_performed_study;
+        rr:objectMap [
+        rml:reference "findSemantic_ub6bL516C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/BiomarkerNegativeResult_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -142,103 +126,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Biomarker_lc_clinical_notes_HUPHM_egfr_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/T790Result_lc_clinical_notes_HUPHM_egfr_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT7.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_EGFR";
-        rr:class clarify:BiomarkerObservation
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_performed_study;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL516C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasNegativeTestResult;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL257C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_mutation_exon21_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL405C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:biomarker;
-        rr:objectMap [
-        rr:constant "http://research.tib.eu/clarify2020/entity/EGFR"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_mutation_T790M_positive_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL294C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_other_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL479C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_mutation_exon19_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL368C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_NOS_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL442C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_mutation_T790M_negative_result;
-        rr:objectMap [
-        rml:reference "findSemantic_ub6bL331C24";
-        rr:termType rr:IRI
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/T790MResult_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT8.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub6bL331C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "result_egfr_t790m"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/T790Result_lc_clinical_notes_HUPHM_egfr_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT9.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -258,9 +148,75 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/NOS_result_lc_clinical_notes_HUPHM_egfr_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/T790MResult_lc_clinical_notes_HUPHM_egfr_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT10.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT5.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub6bL331C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "result_egfr_t790m"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Exon19Result_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub6bL368C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "result_egfr_exon19"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Exon21Result_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT7.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub6bL405C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "result_egfr_exon21"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/NOS_result_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT8.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -277,6 +233,50 @@
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
         rml:reference "result_egfr_nos"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/others_result_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT9.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub6bL479C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "result_egfr_others"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/study_performed_lc_clinical_notes_HUPHM_egfr_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/egfr_mutation_lc_clinical_notes_HUPHM_PROJECT10.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub6bL516C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "study_performed"
         ]
     ].
 

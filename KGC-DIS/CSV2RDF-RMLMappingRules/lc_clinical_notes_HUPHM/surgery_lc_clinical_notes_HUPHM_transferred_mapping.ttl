@@ -12,9 +12,115 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/SurgeryPathologicalResponse_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentEpisode;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/treatement_episode_lc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "surgery_date";
+            rr:parent "surgery_date";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTNMstageAssessment;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "surgery_date";
+            rr:parent "surgery_date";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/treatement_episode_lc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Surgery_{surgery_date}";
+        rr:class clarify:TreatmentEpisode
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentType;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Treatment_Episode_surgery_lc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "surgery_date";
+            rr:parent "surgery_date";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/Treatment_Episode_surgery_lc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_OncologicalSurgery_{surgery_date}";
+        rr:class clarify:OncologicalSurgery
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasPathologicalResponse;
+        rr:objectMap [
+        rml:reference "findSemantic_ub20bL298C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasResectionGrade;
+        rr:objectMap [
+        rml:reference "findSemantic_ub20bL335C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:date;
+        rr:objectMap [
+        rml:reference "surgery_date";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_PerioperativeDeath_orNot;
+        rr:objectMap [
+        rml:reference "perioperative_death"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasClass;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub20bL409C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/SurgeryPathologicalResponse_lc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -34,55 +140,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/treatement_episode_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/SurgeryResectionDegree_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Surgery_{surgery_date}";
-        rr:class clarify:TreatmentEpisode
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentType;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Treatment_Episode_surgery_lc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "surgery_date";
-            rr:parent "surgery_date";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/MetastatisStage_lc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_HUPHM_ub20bL520C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/MetastatisStage"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "stage_m"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/SurgeryResectionDegree_lc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -90,21 +150,43 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "resection_degree"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryResectionDegree"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "resection_degree"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/SurgeryClass_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/SurgeryType_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_HUPHM_ub20bL372C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "surgery_type"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/SurgeryClass_lc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT7.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -112,44 +194,26 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "surgery_class"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryClass"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "surgery_class"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT8.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_{surgery_date}";
         rr:class clarify:TNMstageAssessment
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTNMstage;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "stage_t";
-            rr:parent "stage_t";
-        ];
-        rr:joinCondition [
-            rr:child "stage_n";
-            rr:parent "stage_n";
-        ];
-        rr:joinCondition [
-            rr:child "stage_m";
-            rr:parent "stage_m";
-        ];
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:isAssessedDuring;
@@ -163,11 +227,29 @@
         rml:reference "surgery_date";
         rr:datatype xsd:date;
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTNMstage;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "stage_t";
+            rr:parent "stage_t";
+        ];
+        rr:joinCondition [
+            rr:child "stage_n";
+            rr:parent "stage_n";
+        ];
+        rr:joinCondition [
+            rr:child "stage_m";
+            rr:parent "stage_m";
+        ];
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TNM_Stage_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT7.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT9.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -175,9 +257,9 @@
         rr:class clarify:TNMstage
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:cancerStageTNM_MetastatisStage;
+        rr:predicate clarify:cancerStageTNM_TumorSize;
         rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub20bL520C24";
+        rml:reference "findSemantic_HUPHM_ub20bL446C24";
         rr:termType rr:IRI
         ]
     ];
@@ -189,54 +271,16 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:cancerStageTNM_TumorSize;
+        rr:predicate clarify:cancerStageTNM_MetastatisStage;
         rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub20bL446C24";
+        rml:reference "findSemantic_HUPHM_ub20bL520C24";
         rr:termType rr:IRI
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TumorSize_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT8.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
-        rr:class clarify:LCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentEpisode;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/treatement_episode_lc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "surgery_date";
-            rr:parent "surgery_date";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTNMstageAssessment;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TNM_Stage_assessment_lc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "surgery_date";
-            rr:parent "surgery_date";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TumorSize_lc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT9.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT10.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -256,9 +300,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LymphNodesInvolvement_lc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LymphNodesInvolvement_lc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT10.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT11.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -266,81 +310,37 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "stage_n"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/LymphNodesInvolvement"
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/Treatment_Episode_surgery_lc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT11.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_OncologicalSurgery_{surgery_date}";
-        rr:class clarify:OncologicalSurgery
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasClass;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub20bL409C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_PerioperativeDeath_orNot;
-        rr:objectMap [
-        rml:reference "perioperative_death"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasPathologicalResponse;
-        rr:objectMap [
-        rml:reference "findSemantic_ub20bL298C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:date;
-        rr:objectMap [
-        rml:reference "surgery_date";
-        rr:datatype xsd:date;
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasResectionGrade;
-        rr:objectMap [
-        rml:reference "findSemantic_ub20bL335C24";
-        rr:termType rr:IRI
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/SurgeryType_lc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT12.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_HUPHM_ub20bL372C24";
-        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rml:reference "surgery_type"
+        rml:reference "stage_n"
         ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/MetastatisStage_lc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/surgery_lc_clinical_notes_HUPHM_PROJECT12.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_HUPHM_ub20bL520C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryType"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/MetastatisStage"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "stage_m"
         ]
     ].
 

@@ -12,9 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -24,7 +24,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasClinicalTrialTreatmentLine;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/ClinicalTrialTreatmentLine_lc_clinical_notes_SLCG_clinical_trial_treatment_line>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/ClinicalTrialTreatmentLine_lc_clinical_notes_SLCG_clinical_trial_treatment_line>;
         rr:joinCondition [
             rr:child "ehr";
             rr:parent "ehr";
@@ -36,41 +36,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/ClinicalTrialTreatmentLine_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
-        rr:class clarify:TreatmentLineNumber
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/phase_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub5bL135C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/TrialPhase"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "phase"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/ClinicalTrialTreatmentLine_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -78,16 +46,9 @@
         rr:class clarify:ClinicalTrialTreatmentLine
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasType;
-        rr:objectMap [
-        rml:reference "findSemantic_ub5bL209C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:treatmentLineNumber;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_clinical_trial_treatment_line>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_clinical_trial_treatment_line>;
         rr:joinCondition [
             rr:child "treatment_line";
             rr:parent "treatment_line";
@@ -107,11 +68,50 @@
         rml:reference "findSemantic_ub5bL172C24";
         rr:termType rr:IRI
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub5bL209C24";
+        rr:termType rr:IRI
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/targeted_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
+        rr:class clarify:TreatmentLineNumber
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/phase_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub5bL135C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/TrialPhase"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "phase"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/targeted_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -119,21 +119,21 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "targeted_clinical_trial"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/TrialType"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "targeted_clinical_trial"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/therapeutic_target_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/therapeutic_target_lc_clinical_notes_SLCG_clinical_trial_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//clinical_trial_treatment_line_lc_clinical_notes_SLCG_PROJECT6.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -141,15 +141,15 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "therapeutic_target"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/TrialType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "therapeutic_target"
         ]
     ].
 

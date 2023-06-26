@@ -12,14 +12,40 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TumorHistologyAssessment_lc_clinical_notes_SLCG_tnm_stadification>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTumorHistologyAssessment;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TumorHistologyAssessment_lc_clinical_notes_SLCG_tnm_stadification>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TumorHistologyAssessment_lc_clinical_notes_SLCG_tnm_stadification>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_TumorHistologyAssessment";
         rr:class clarify:TumorHistologyAssessment
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:isAssessedDuring;
+        rr:objectMap [
+        rr:constant "Diagnosis"
+        ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:isAssessedOn;
@@ -34,37 +60,68 @@
         rml:reference "findSemantic_ub32bL213C24";
         rr:termType rr:IRI
         ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:isAssessedDuring;
-        rr:objectMap [
-        rr:constant "Diagnosis"
-        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TumorHistology_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
-        rr:class clarify:LCPatient
+        rml:reference "findSemantic_ub32bL213C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTumorHistologyAssessment;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TumorHistologyAssessment_lc_clinical_notes_SLCG_tnm_stadification>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
+        rr:template  "http://research.tib.eu/clarify2020/vocab/TumorType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "type"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasAdenocarcinomaHistology;
+        rr:objectMap [
+        rml:reference "findSemantic_ub32bL250C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSmallCellCarcinomaType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub32bL287C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasCarcinomaType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub32bL324C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasMesotheliomaType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub32bL361C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasHistologyDegree;
+        rr:objectMap [
+        rml:reference "findSemantic_ub32bL398C24";
+        rr:termType rr:IRI
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/AdenocarcinomaHistology_lc_clinical_notes_SLCG_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/AdenocarcinomaHistology_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -84,31 +141,53 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/HistologyDegree_lc_clinical_notes_SLCG_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/SmallCellCarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_ub32bL398C24";
+        rml:reference "findSemantic_ub32bL287C24";
         rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "degree"
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/HistologyDegree"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/SmallCellCarcinomaType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "small_cell_carcinom"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/MesotheliomaType_lc_clinical_notes_SLCG_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/CarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub32bL324C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/CarcinomaType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "carcinom"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/MesotheliomaType_lc_clinical_notes_SLCG_tumor_histology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT7.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -128,104 +207,25 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TumorHistology_lc_clinical_notes_SLCG_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/HistologyDegree_lc_clinical_notes_SLCG_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//tumor_histology_lc_clinical_notes_SLCG_PROJECT8.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_ub32bL213C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSmallCellCarcinomaType;
-        rr:objectMap [
-        rml:reference "findSemantic_ub32bL287C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasMesotheliomaType;
-        rr:objectMap [
-        rml:reference "findSemantic_ub32bL361C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasAdenocarcinomaHistology;
-        rr:objectMap [
-        rml:reference "findSemantic_ub32bL250C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasHistologyDegree;
-        rr:objectMap [
         rml:reference "findSemantic_ub32bL398C24";
         rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasCarcinomaType;
-        rr:objectMap [
-        rml:reference "findSemantic_ub32bL324C24";
-        rr:termType rr:IRI
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/TumorType"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/HistologyDegree"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rml:reference "type"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/SmallCellCarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT7.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub32bL287C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "small_cell_carcinom"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/SmallCellCarcinomaType"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/CarcinomaType_lc_clinical_notes_SLCG_tumor_histology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/tumor_histology_lc_clinical_notes_SLCG_PROJECT8.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub32bL324C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/CarcinomaType"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "carcinom"
+        rml:reference "degree"
         ]
     ].
 

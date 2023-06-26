@@ -12,54 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/SurgeryIteration_lc_clinical_notes_SLCG_surgery_subtype>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/OncologicalSurgery_lc_clinical_notes_SLCG_surgery_subtype>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype_lc_clinical_notes_SLCG_PROJECT1.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_{treatment_line}_{surgery_iteration}";
-        rr:class clarify:OncologicalSurgeryIteration
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:surgerySubTypeSpecification;
-        rr:objectMap [
-        rml:reference "specify_surgery_subtype"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSubType;
-        rr:objectMap [
-        rml:reference "findSemantic_ub30bL75C24";
-        rr:termType rr:IRI
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/SurgerySubType_lc_clinical_notes_SLCG_surgery_subtype>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype_lc_clinical_notes_SLCG_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub30bL75C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "surgery_subytpe"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgerySubType"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/OncologicalSurgery_lc_clinical_notes_SLCG_surgery_subtype>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/surgery_subtype_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//surgery_subtype_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -69,7 +24,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasSurgeryIteration;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/SurgeryIteration_lc_clinical_notes_SLCG_surgery_subtype>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/SurgeryIteration_lc_clinical_notes_SLCG_surgery_subtype>;
         rr:joinCondition [
             rr:child "ehr";
             rr:parent "ehr";
@@ -82,6 +37,51 @@
             rr:child "surgery_iteration";
             rr:parent "surgery_iteration";
         ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/SurgeryIteration_lc_clinical_notes_SLCG_surgery_subtype>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//surgery_subtype_lc_clinical_notes_SLCG_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_{treatment_line}_{surgery_iteration}";
+        rr:class clarify:OncologicalSurgeryIteration
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSubType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub30bL75C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:surgerySubTypeSpecification;
+        rr:objectMap [
+        rml:reference "specify_surgery_subtype"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/SurgerySubType_lc_clinical_notes_SLCG_surgery_subtype>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//surgery_subtype_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub30bL75C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgerySubType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "surgery_subytpe"
         ]
     ].
 

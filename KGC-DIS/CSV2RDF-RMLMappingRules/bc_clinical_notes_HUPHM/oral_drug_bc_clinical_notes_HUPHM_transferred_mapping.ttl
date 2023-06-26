@@ -12,9 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_oral_drug>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_oral_drug>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/oral_drug_bc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/oral_drug_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -22,15 +22,15 @@
         rr:class clarify:BCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOralDrugType;
-        rr:objectMap [
-        rml:reference "findSemantic_OralDrugType_HUPHM_BreastCancer_ub4bL77C24";
-        ];
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:hasOralDrug;
         rr:objectMap [
         rml:reference "findSemantic_HUPHM_BreastCancer_ub4bL40C24";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOralDrugType;
+        rr:objectMap [
+        rml:reference "findSemantic_OralDrugType_HUPHM_BreastCancer_ub4bL77C24";
         ];
     ].
 

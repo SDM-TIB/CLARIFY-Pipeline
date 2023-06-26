@@ -12,31 +12,40 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/smoking_habit_bc_clinical_notes_HUPHM_comorbidity>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_comorbidity>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_smokinghabit_HUPHM_BreastCancer_ub2bL181C24";
-        rr:termType rr:IRI
+        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
+        rr:class clarify:BCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
+        rr:predicate clarify:hasComorbidityStatus;
         rr:objectMap [
-        rml:reference "comorbidity"
+        rml:reference "findSemantic_HUPHM_BreastCancer_ub2bL107C24";
+        rr:termType rr:IRI
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate rdf:type;
+        rr:predicate clarify:hasComorbidity;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/SmokingHabit"
+        rml:reference "findSemantic_HUPHM_BreastCancer_ub2bL144C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSmokingHabit;
+        rr:objectMap [
+        rml:reference "findSemantic_smokinghabit_HUPHM_BreastCancer_ub2bL181C24";
+        rr:termType rr:IRI
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/positive_negative_bc_clinical_notes_HUPHM_comorbidity>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/positive_negative_bc_clinical_notes_HUPHM_comorbidity>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -56,9 +65,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Disorder_bc_clinical_notes_HUPHM_comorbidity>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Disorder_bc_clinical_notes_HUPHM_comorbidity>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -78,34 +87,25 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_comorbidity>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/smoking_habit_bc_clinical_notes_HUPHM_comorbidity>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/comorbidity_bc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
-        rr:class clarify:BCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasComorbidity;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_BreastCancer_ub2bL144C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasComorbidityStatus;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_BreastCancer_ub2bL107C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSmokingHabit;
-        rr:objectMap [
         rml:reference "findSemantic_smokinghabit_HUPHM_BreastCancer_ub2bL181C24";
         rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/SmokingHabit"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "comorbidity"
         ]
     ].
 

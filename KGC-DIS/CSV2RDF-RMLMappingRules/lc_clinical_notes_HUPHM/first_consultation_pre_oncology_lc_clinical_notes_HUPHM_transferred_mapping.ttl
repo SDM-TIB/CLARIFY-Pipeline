@@ -12,9 +12,113 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/asymptomatic_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasNonOncologicalConsultation;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/NonOncologicalConsultation_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "date_consultation";
+            rr:parent "date_consultation";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/NonOncologicalConsultation_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_NonOncologicalConsultationDate_{date_consultation}";
+        rr:class clarify:NonOncologicalConsultation
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:date;
+        rr:objectMap [
+        rml:reference "date_consultation";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:patient_is_asymptomatic;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL284C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL321C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL358C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL395C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL432C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL469C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL506C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL543C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSymptom;
+        rr:objectMap [
+        rml:reference "findSemantic_ub8bL580C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/asymptomatic_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -34,53 +138,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/dyspnoea_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/cough_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub8bL395C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "dyspnoea"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/pain_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub8bL358C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "pain"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/cough_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -100,33 +160,53 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/pain_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
-        rr:class clarify:LCPatient
+        rml:reference "findSemantic_ub8bL358C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasNonOncologicalConsultation;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/NonOncologicalConsultation_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "date_consultation";
-            rr:parent "date_consultation";
-        ];
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "pain"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/hemoptysis_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/dyspnoea_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub8bL395C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "dyspnoea"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/hemoptysis_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT7.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -134,21 +214,21 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "hemoptysis"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "hemoptysis"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/asthenia_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/asthenia_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT7.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT8.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -156,21 +236,21 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "asthenia"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "asthenia"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/anorexia_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/anorexia_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT8.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT9.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -190,127 +270,47 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/weightLoss_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/weightLoss_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT9.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT10.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rml:reference "findSemantic_ub8bL543C24";
         rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
+        ]
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
         rml:reference "weight_loss"
         ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/weightLoss_last_3_months_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT11.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub8bL580C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/weightLoss_last_3_months_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT10.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub8bL580C24";
-        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
         rml:reference "weight_loss_last_3_months"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Phenotype"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/NonOncologicalConsultation_lc_clinical_notes_HUPHM_first_consultation_pre_oncology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/first_consultation_pre_oncology_lc_clinical_notes_HUPHM_PROJECT11.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_NonOncologicalConsultationDate_{date_consultation}";
-        rr:class clarify:NonOncologicalConsultation
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL506C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL580C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL358C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL395C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:patient_is_asymptomatic;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL284C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL469C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL543C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL321C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSymptom;
-        rr:objectMap [
-        rml:reference "findSemantic_ub8bL432C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:date;
-        rr:objectMap [
-        rml:reference "date_consultation";
-        rr:datatype xsd:date;
         ]
     ].
 

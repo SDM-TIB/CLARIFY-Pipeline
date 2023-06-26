@@ -12,9 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_lc_clinical_notes_HUPHM_radiotherapy_drugs>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_lc_clinical_notes_HUPHM_radiotherapy_drugs>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/radiotherapy_drugs_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/radiotherapy_drugs_lc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -22,15 +22,15 @@
         rr:class clarify:Radiotherapy
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:treatmentLineFractioning;
-        rr:objectMap [
-        rml:reference "fractioning"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:treatmentLineDosage;
         rr:objectMap [
         rml:reference "dose"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatmentLineFractioning;
+        rr:objectMap [
+        rml:reference "fractioning"
         ]
     ].
 

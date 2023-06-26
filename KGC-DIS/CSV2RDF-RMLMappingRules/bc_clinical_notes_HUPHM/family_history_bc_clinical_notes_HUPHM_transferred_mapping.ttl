@@ -12,9 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_family_history>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_family_history>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/family_history_bc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/family_history_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -29,9 +29,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/FamilyCancerType_bc_clinical_notes_HUPHM_family_history>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/FamilyCancerType_bc_clinical_notes_HUPHM_family_history>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/family_history_bc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/family_history_bc_clinical_notes_HUPHM_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -39,9 +39,9 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasCUIAnnotation;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/entity/{cancer_cui}"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/CancerType"
         ]
     ];
     rr:predicateObjectMap [
@@ -51,9 +51,9 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate rdf:type;
+        rr:predicate clarify:hasCUIAnnotation;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/CancerType"
+        rr:template  "http://research.tib.eu/clarify2020/entity/{cancer_cui}"
         ]
     ].
 

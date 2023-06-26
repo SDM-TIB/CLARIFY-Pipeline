@@ -13,81 +13,33 @@
 @prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_4_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{drug4}";
+        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
+        rr:class clarify:BCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate rdf:type;
+        rr:predicate clarify:hasTreatmentEpisode;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BreastCancerOncologicalDrug"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{cycle_number}";
-        rr:class clarify:TreatmentLineCycle
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Type_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Chemotherapy_{cycle_number}_{id_schema}";
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasDrugSchema;
-        rr:objectMap [
-        rml:reference "findDrugSchema_BC_ub1bL194C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentLineCycle;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
         rr:joinCondition [
-            rr:child "cycle_number";
-            rr:parent "cycle_number";
+            rr:child "ehr";
+            rr:parent "ehr";
+        ];
+        rr:joinCondition [
+            rr:child "date";
+            rr:parent "date";
         ];
         ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/Chemotherapy"
-        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_1_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{drug1}";
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BreastCancerOncologicalDrug"
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -97,7 +49,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasTreatmentType;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Type_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Type_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
         rr:joinCondition [
             rr:child "ehr";
             rr:parent "ehr";
@@ -113,9 +65,41 @@
         ]
     ];
     rr:predicateObjectMap [
+        rr:predicate clarify:treatementLineDate;
+        rr:objectMap [
+        rml:reference "date";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
         rr:predicate clarify:hasEpisode;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>;
+        rr:joinCondition [
+            rr:child "cycle_number";
+            rr:parent "cycle_number";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Type_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Chemotherapy_{cycle_number}_{id_schema}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/Chemotherapy"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentLineCycle;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>;
         rr:joinCondition [
             rr:child "cycle_number";
             rr:parent "cycle_number";
@@ -123,31 +107,21 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:treatementLineDate;
+        rr:predicate clarify:hasDrugSchema;
         rr:objectMap [
-        rml:reference "date";
-        rr:datatype xsd:date;
+        rml:reference "findDrugSchema_BC_ub1bL195C24";
+        rr:termType rr:IRI
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/chemotherapy_drug_schema_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/chemotherapy_drug_schema_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT6.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findDrugSchema_BC_ub1bL194C24";
+        rml:reference "findDrugSchema_BC_ub1bL195C24";
         rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasDrug4;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_4_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
-        rr:joinCondition [
-            rr:child "drug4";
-            rr:parent "drug4";
-        ];
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
@@ -156,19 +130,9 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasDrug3;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_3_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
-        rr:joinCondition [
-            rr:child "drug3";
-            rr:parent "drug3";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:hasDrug1;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_1_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_1_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
         rr:joinCondition [
             rr:child "drug1";
             rr:parent "drug1";
@@ -178,17 +142,67 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasDrug2;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_2_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_2_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
         rr:joinCondition [
             rr:child "drug2";
             rr:parent "drug2";
         ];
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasDrug3;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_3_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
+        rr:joinCondition [
+            rr:child "drug3";
+            rr:parent "drug3";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasDrug4;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_4_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
+        rr:joinCondition [
+            rr:child "drug4";
+            rr:parent "drug4";
+        ];
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_3_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_1_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT7.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT5.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{drug1}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BreastCancerOncologicalDrug"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_2_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT6.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{drug2}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BreastCancerOncologicalDrug"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_3_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT7.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -201,42 +215,28 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_4_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT8.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT8.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
-        rr:class clarify:BCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentEpisode;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>;
-        rr:joinCondition [
-            rr:child "ehr";
-            rr:parent "ehr";
-        ];
-        rr:joinCondition [
-            rr:child "date";
-            rr:parent "date";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_chemotherapy_schema_drug_2_bc_clinical_notes_HUPHM_chemotherapy_treatment_episode>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT9.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{drug2}";
+        rr:template "http://research.tib.eu/clarify2020/entity/{drug4}";
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/BreastCancerOncologicalDrug"
         ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineCycle_bc_clinical_notes_HUPHM_chemotherapy_drugs>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/chemotherapy_treatment_episode_bc_clinical_notes_HUPHM_PROJECT9.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{cycle_number}";
+        rr:class clarify:TreatmentLineCycle
     ].
 

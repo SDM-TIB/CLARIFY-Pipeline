@@ -12,107 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT1.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}_Radiotherapy_{n_radiotherapy}";
-        rr:class clarify:Radiotherapy
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:treatementLineStartDate;
-        rr:objectMap [
-        rml:reference "date_start";
-        rr:datatype xsd:date;
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:treatmentLineDosage;
-        rr:objectMap [
-        rml:reference "dose_gy"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasRadiotherapyRound;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
-        rr:joinCondition [
-            rr:child "n_radiotherapy";
-            rr:parent "n_radiotherapy";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:treatementLineEndingDate;
-        rr:objectMap [
-        rml:reference "date_end";
-        rr:datatype xsd:date;
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_radiotherapy_bc_clinical_notes_HUPHM_radiotherapy_treatment_episode>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT2.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Radiotherapy_{date_start}";
-        rr:class clarify:TreatmentEpisode
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasEpisode;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
-        rr:joinCondition [
-            rr:child "n_radiotherapy";
-            rr:parent "n_radiotherapy";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:treatementLineEndingDate;
-        rr:objectMap [
-        rml:reference "date_end";
-        rr:datatype xsd:date;
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentType;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
-        rr:joinCondition [
-            rr:child "ehr";
-            rr:parent "ehr";
-        ];
-        rr:joinCondition [
-            rr:child "n_radiotherapy";
-            rr:parent "n_radiotherapy";
-        ];
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:treatementLineStartDate;
-        rr:objectMap [
-        rml:reference "date_start";
-        rr:datatype xsd:date;
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/TL_{n_radiotherapy}";
-        rr:class clarify:RadiotherapyRound
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -122,7 +24,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasTreatmentEpisode;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_radiotherapy_bc_clinical_notes_HUPHM_radiotherapy_treatment_episode>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_radiotherapy_bc_clinical_notes_HUPHM_radiotherapy_treatment_episode>;
         rr:joinCondition [
             rr:child "ehr";
             rr:parent "ehr";
@@ -132,5 +34,103 @@
             rr:parent "date_start";
         ];
         ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_radiotherapy_bc_clinical_notes_HUPHM_radiotherapy_treatment_episode>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Radiotherapy_{date_start}";
+        rr:class clarify:TreatmentEpisode
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentType;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
+        rr:joinCondition [
+            rr:child "ehr";
+            rr:parent "ehr";
+        ];
+        rr:joinCondition [
+            rr:child "n_radiotherapy";
+            rr:parent "n_radiotherapy";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatementLineStartDate;
+        rr:objectMap [
+        rml:reference "date_start";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatementLineEndingDate;
+        rr:objectMap [
+        rml:reference "date_end";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasEpisode;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
+        rr:joinCondition [
+            rr:child "n_radiotherapy";
+            rr:parent "n_radiotherapy";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/RadiotherapyTreatmentLine_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}_Radiotherapy_{n_radiotherapy}";
+        rr:class clarify:Radiotherapy
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasRadiotherapyRound;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>;
+        rr:joinCondition [
+            rr:child "n_radiotherapy";
+            rr:parent "n_radiotherapy";
+        ];
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatementLineStartDate;
+        rr:objectMap [
+        rml:reference "date_start";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatementLineEndingDate;
+        rr:objectMap [
+        rml:reference "date_end";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:treatmentLineDosage;
+        rr:objectMap [
+        rml:reference "dose_gy"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/TreatmentLineNumber_bc_clinical_notes_HUPHM_radiotherapy_treatment_line>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/radiotherapy_treatment_line_bc_clinical_notes_HUPHM_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/TL_{n_radiotherapy}";
+        rr:class clarify:RadiotherapyRound
     ].
 

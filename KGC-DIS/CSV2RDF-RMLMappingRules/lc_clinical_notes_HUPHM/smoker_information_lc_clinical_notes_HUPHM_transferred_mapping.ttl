@@ -12,9 +12,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_smoker_information>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_smoker_information>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -22,24 +22,10 @@
         rr:class clarify:LCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasSmokeEnvironment;
+        rr:predicate clarify:numberOfCigarettesPerYear;
         rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub19bL164C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:numberOfYearsOfSmoking;
-        rr:objectMap [
-        rml:reference "years_active_smoker";
+        rml:reference "packs_year";
         rr:datatype xsd:int;
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasSmokingHabit;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub19bL201C24";
-        rr:termType rr:IRI
         ]
     ];
     rr:predicateObjectMap [
@@ -50,9 +36,9 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:numberOfCigarettesPerYear;
+        rr:predicate clarify:numberOfYearsOfSmoking;
         rr:objectMap [
-        rml:reference "packs_year";
+        rml:reference "years_active_smoker";
         rr:datatype xsd:int;
         ]
     ];
@@ -62,11 +48,25 @@
         rml:reference "findSemantic_HUPHM_ub19bL127C24";
         rr:termType rr:IRI
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSmokeEnvironment;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub19bL164C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasSmokingHabit;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub19bL201C24";
+        rr:termType rr:IRI
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/lives_with_smokers_lc_clinical_notes_HUPHM_smoker_information>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/lives_with_smokers_lc_clinical_notes_HUPHM_smoker_information>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -74,21 +74,21 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "lives_with_smokers"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/SmokeEnvironment"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "lives_with_smokers"
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/has_lived_with_smokers_lc_clinical_notes_HUPHM_smoker_information>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/has_lived_with_smokers_lc_clinical_notes_HUPHM_smoker_information>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -108,9 +108,9 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/smoking_habit_lc_clinical_notes_HUPHM_smoker_information>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/smoking_habit_lc_clinical_notes_HUPHM_smoker_information>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/smoker_information_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -118,15 +118,15 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "smoking_habit"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/SmokingHabit"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "smoking_habit"
         ]
     ].
 

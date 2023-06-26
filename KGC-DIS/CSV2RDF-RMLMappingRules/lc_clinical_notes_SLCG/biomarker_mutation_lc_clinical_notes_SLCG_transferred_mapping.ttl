@@ -12,25 +12,33 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/BiomarkerResult_lc_clinical_notes_SLCG_biomarker_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_biomarker_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//biomarker_mutation_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findBiomarkerTestResult_ub2bL72C24";
-        rr:termType rr:IRI
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate rdf:type;
+        rr:predicate clarify:hasBiomarker;
         rr:objectMap [
-        rr:constant "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Biomarker_lc_clinical_notes_SLCG_biomarker_mutation>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "study_performed";
+            rr:parent "study_performed";
+        ];
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Biomarker_lc_clinical_notes_SLCG_biomarker_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Biomarker_lc_clinical_notes_SLCG_biomarker_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//biomarker_mutation_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -46,7 +54,7 @@
     rr:predicateObjectMap [
         rr:predicate clarify:hasTestResult;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/BiomarkerResult_lc_clinical_notes_SLCG_biomarker_mutation>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/BiomarkerResult_lc_clinical_notes_SLCG_biomarker_mutation>;
         rr:joinCondition [
             rr:child "study_performed";
             rr:parent "study_performed";
@@ -54,27 +62,19 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_biomarker_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/BiomarkerResult_lc_clinical_notes_SLCG_biomarker_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/biomarker_mutation_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//biomarker_mutation_lc_clinical_notes_SLCG_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
-        rr:class clarify:LCPatient
+        rml:reference "findBiomarkerTestResult_ub2bL72C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasBiomarker;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Biomarker_lc_clinical_notes_SLCG_biomarker_mutation>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "study_performed";
-            rr:parent "study_performed";
-        ];
+        rr:constant "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
         ]
     ].
 

@@ -12,20 +12,64 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TumorHistology_lc_clinical_notes_HUPHM_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT1.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTumorHistologyAssessment;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TumorHistologyAssessment_lc_clinical_notes_HUPHM_tnm_stadification>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TumorHistologyAssessment_lc_clinical_notes_HUPHM_tnm_stadification>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_TumorHistologyAssessment";
+        rr:class clarify:TumorHistologyAssessment
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:isAssessedDuring;
+        rr:objectMap [
+        rr:constant "Diagnosis"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:isAssessedOn;
+        rr:objectMap [
+        rml:reference "date";
+        rr:datatype xsd:date;
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasHistology;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub22bL121C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/TumorHistology_lc_clinical_notes_HUPHM_tumor_histology>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
         rml:reference "findSemantic_HUPHM_ub22bL121C24";
         rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "type"
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
@@ -34,10 +78,9 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasHistologyDegree;
+        rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub22bL158C24";
-        rr:termType rr:IRI
+        rml:reference "type"
         ]
     ];
     rr:predicateObjectMap [
@@ -51,11 +94,18 @@
         rr:objectMap [
         rml:reference "primary_tumor_size"
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasHistologyDegree;
+        rr:objectMap [
+        rml:reference "findSemantic_HUPHM_ub22bL158C24";
+        rr:termType rr:IRI
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/HistologyDegree_lc_clinical_notes_HUPHM_tumor_histology>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_HUPHM/HistologyDegree_lc_clinical_notes_HUPHM_tumor_histology>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -63,65 +113,15 @@
         rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "degree"
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
         rr:template  "http://research.tib.eu/clarify2020/vocab/HistologyDegree"
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/LCPatient_lc_clinical_notes_HUPHM_tumor_histology>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT3.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/HUPHM_{EHR}";
-        rr:class clarify:LCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTumorHistologyAssessment;
+        rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TumorHistologyAssessment_lc_clinical_notes_HUPHM_tnm_stadification>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_HUPHM/TumorHistologyAssessment_lc_clinical_notes_HUPHM_tnm_stadification>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_HUPHM/tumor_histology_lc_clinical_notes_HUPHM_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_Diagnosis_TumorHistologyAssessment";
-        rr:class clarify:TumorHistologyAssessment
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:isAssessedOn;
-        rr:objectMap [
-        rml:reference "date";
-        rr:datatype xsd:date;
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:isAssessedDuring;
-        rr:objectMap [
-        rr:constant "Diagnosis"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasHistology;
-        rr:objectMap [
-        rml:reference "findSemantic_HUPHM_ub22bL121C24";
-        rr:termType rr:IRI
+        rml:reference "degree"
         ]
     ].
 

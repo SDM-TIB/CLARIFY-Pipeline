@@ -12,31 +12,61 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/SurgeryType_bc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_HUPHM_BreastCancer_ub7bL107C24";
-        rr:termType rr:IRI
+        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
+        rr:class clarify:BCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
+        rr:predicate clarify:hasTreatmentEpisode;
         rr:objectMap [
-        rml:reference "surgery"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryType"
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/treatement_episode_bc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "ehr";
+            rr:parent "ehr";
+        ];
+        rr:joinCondition [
+            rr:child "date_year";
+            rr:parent "date_year";
+        ];
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_surgery_bc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/treatement_episode_bc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Surgery_{date_year}";
+        rr:class clarify:TreatmentEpisode
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTreatmentType;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_surgery_bc_clinical_notes_HUPHM_surgery>;
+        rr:joinCondition [
+            rr:child "ehr";
+            rr:parent "ehr";
+        ];
+        rr:joinCondition [
+            rr:child "surgery";
+            rr:parent "surgery";
+        ];
+        rr:joinCondition [
+            rr:child "n_surgery";
+            rr:parent "n_surgery";
+        ];
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/Treatment_Episode_surgery_bc_clinical_notes_HUPHM_surgery>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -72,55 +102,25 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/BCPatient_bc_clinical_notes_HUPHM_surgery>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/bc_clinical_notes_HUPHM/SurgeryType_bc_clinical_notes_HUPHM_surgery>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/BC_HUPHM_{ehr}";
-        rr:class clarify:BCPatient
+        rml:reference "findSemantic_HUPHM_BreastCancer_ub7bL107C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentEpisode;
+        rr:predicate rdf:type;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/treatement_episode_bc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "ehr";
-            rr:parent "ehr";
-        ];
-        rr:joinCondition [
-            rr:child "date_year";
-            rr:parent "date_year";
-        ];
+        rr:template  "http://research.tib.eu/clarify2020/vocab/SurgeryType"
         ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/treatement_episode_bc_clinical_notes_HUPHM_surgery>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/mnt/e/CLARIFY-KG-pipeline/output/Dragoman/bc_clinical_notes_HUPHM/surgery_bc_clinical_notes_HUPHM_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Surgery_{date_year}";
-        rr:class clarify:TreatmentEpisode
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTreatmentType;
+        rr:predicate clarify:hasOriginalValue;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/bc_clinical_notes_HUPHM/Treatment_Episode_surgery_bc_clinical_notes_HUPHM_surgery>;
-        rr:joinCondition [
-            rr:child "ehr";
-            rr:parent "ehr";
-        ];
-        rr:joinCondition [
-            rr:child "surgery";
-            rr:parent "surgery";
-        ];
-        rr:joinCondition [
-            rr:child "n_surgery";
-            rr:parent "n_surgery";
-        ];
+        rml:reference "surgery"
         ]
     ].
 

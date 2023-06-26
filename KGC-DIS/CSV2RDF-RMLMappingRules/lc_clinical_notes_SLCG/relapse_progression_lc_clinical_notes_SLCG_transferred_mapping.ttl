@@ -12,19 +12,33 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_relapse_progression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_relapse_progression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
-        rr:class clarify:TreatmentLineNumber
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasProgressionRelapseAssessment;
+        rr:objectMap [
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/progressionRelapseObservation_lc_clinical_notes_SLCG_relapse_progression>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
+        rr:joinCondition [
+            rr:child "occurrence_date";
+            rr:parent "occurrence_date";
+        ];
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/progressionRelapseObservation_lc_clinical_notes_SLCG_relapse_progression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/progressionRelapseObservation_lc_clinical_notes_SLCG_relapse_progression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT2.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -32,9 +46,9 @@
         rr:class clarify:ProgressionRelapseAssessment
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasTherapyType;
+        rr:predicate clarify:hasProgressionOrRelapse;
         rr:objectMap [
-        rml:reference "findSemantic_ub25bL248C24";
+        rml:reference "concat3_ub25bL144C24";
         rr:termType rr:IRI
         ]
     ];
@@ -46,16 +60,9 @@
         ]
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasProgressionOrRelapse;
-        rr:objectMap [
-        rml:reference "concat3_ub25bL144C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
         rr:predicate clarify:hasEpisode;
         rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TreatmentLineNumber_lc_clinical_notes_SLCG_relapse_progression>;
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_relapse_progression>;
         rr:joinCondition [
             rr:child "treatment_line";
             rr:parent "treatment_line";
@@ -68,11 +75,18 @@
         rml:reference "findSemantic_ub25bL211C24";
         rr:termType rr:IRI
         ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTherapyType;
+        rr:objectMap [
+        rml:reference "findSemantic_ub25bL248C24";
+        rr:termType rr:IRI
+        ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Progression_or_Relapse_lc_clinical_notes_SLCG_relapse_progression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Progression_or_Relapse_lc_clinical_notes_SLCG_relapse_progression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT3.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -92,9 +106,31 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/TherapyType_lc_clinical_notes_SLCG_relapse_progression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/ProgressionType_lc_clinical_notes_SLCG_relapse_progression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT4.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT4.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub25bL211C24";
+        rr:termType rr:IRI
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/vocab/ProgressionType"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "progression_type"
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TherapyType_lc_clinical_notes_SLCG_relapse_progression>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -114,49 +150,13 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_relapse_progression>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/TreatmentLineNumber_lc_clinical_notes_SLCG_relapse_progression>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT5.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//relapse_progression_lc_clinical_notes_SLCG_PROJECT6.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
-        rr:class clarify:LCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasProgressionRelapseAssessment;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/progressionRelapseObservation_lc_clinical_notes_SLCG_relapse_progression>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        rr:joinCondition [
-            rr:child "occurrence_date";
-            rr:parent "occurrence_date";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/ProgressionType_lc_clinical_notes_SLCG_relapse_progression>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/relapse_progression_lc_clinical_notes_SLCG_PROJECT6.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub25bL211C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "progression_type"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-        rr:constant "http://research.tib.eu/clarify2020/vocab/ProgressionType"
-        ]
+        rr:template "http://research.tib.eu/clarify2020/entity/TL_{treatment_line}";
+        rr:class clarify:TreatmentLineNumber
     ].
 

@@ -12,31 +12,88 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix clarify: <http://research.tib.eu/clarify2020/vocab/> .
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/study_performed_lc_clinical_notes_SLCG_her2_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/LCPatient_lc_clinical_notes_SLCG_her2_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/her2_mutation_lc_clinical_notes_SLCG_PROJECT1.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//her2_mutation_lc_clinical_notes_SLCG_PROJECT1.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rml:reference "findSemantic_ub13bL201C24";
-        rr:termType rr:IRI
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
+        rr:class clarify:LCPatient
     ];
     rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
+        rr:predicate clarify:hasBiomarker;
         rr:objectMap [
-        rml:reference "study_performed"
+        rr:parentTriplesMap <file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Biomarker_lc_clinical_notes_SLCG_her2_mutation>;
+        rr:joinCondition [
+            rr:child "EHR";
+            rr:parent "EHR";
+        ];
         ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/Biomarker_lc_clinical_notes_SLCG_her2_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//her2_mutation_lc_clinical_notes_SLCG_PROJECT2.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_HER2";
+        rr:class clarify:BiomarkerObservation
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:biomarker;
+        rr:objectMap [
+        rr:constant "http://research.tib.eu/clarify2020/entity/HER2"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTestIHQResult;
+        rr:objectMap [
+        rml:reference "findSemantic_ub13bL127C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasTestFISHResult;
+        rr:objectMap [
+        rml:reference "findSemantic_ub13bL164C24";
+        rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:has_performed_study;
+        rr:objectMap [
+        rml:reference "findSemantic_ub13bL201C24";
+        rr:termType rr:IRI
+        ]
+    ].
+
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/BiomarkerIHQResult_lc_clinical_notes_SLCG_her2_mutation>
+    a rr:TriplesMap;
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//her2_mutation_lc_clinical_notes_SLCG_PROJECT3.csv";
+                rml:referenceFormulation ql:CSV
+                ];
+    rr:subjectMap [
+        rml:reference "findSemantic_ub13bL127C24";
+        rr:termType rr:IRI
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "result_her2_ihq"
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/BiomarkerFISHResult_lc_clinical_notes_SLCG_her2_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/BiomarkerFISHResult_lc_clinical_notes_SLCG_her2_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/her2_mutation_lc_clinical_notes_SLCG_PROJECT2.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//her2_mutation_lc_clinical_notes_SLCG_PROJECT4.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
@@ -56,82 +113,25 @@
         ]
     ].
 
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Biomarker_lc_clinical_notes_SLCG_her2_mutation>
+<file:///mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/mappings/lc_clinical_notes_SLCG_pipeline/study_performed_lc_clinical_notes_SLCG_her2_mutation>
     a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/her2_mutation_lc_clinical_notes_SLCG_PROJECT3.csv";
+    rml:logicalSource [ rml:source "/mnt/c/Users/NiazmandE/Desktop/TIB-Hannover/Hannover-TIB/dragoman/Dragoman/output/newOutputPipeline//her2_mutation_lc_clinical_notes_SLCG_PROJECT5.csv";
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}_HER2";
-        rr:class clarify:BiomarkerObservation
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:has_performed_study;
-        rr:objectMap [
         rml:reference "findSemantic_ub13bL201C24";
         rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTestFISHResult;
-        rr:objectMap [
-        rml:reference "findSemantic_ub13bL164C24";
-        rr:termType rr:IRI
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:biomarker;
-        rr:objectMap [
-        rr:constant "http://research.tib.eu/clarify2020/entity/HER2"
-        ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasTestIHQResult;
-        rr:objectMap [
-        rml:reference "findSemantic_ub13bL127C24";
-        rr:termType rr:IRI
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/LCPatient_lc_clinical_notes_SLCG_her2_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/her2_mutation_lc_clinical_notes_SLCG_PROJECT4.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{EHR}";
-        rr:class clarify:LCPatient
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasBiomarker;
-        rr:objectMap [
-        rr:parentTriplesMap <file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/Biomarker_lc_clinical_notes_SLCG_her2_mutation>;
-        rr:joinCondition [
-            rr:child "EHR";
-            rr:parent "EHR";
-        ];
-        ]
-    ].
-
-<file:///mnt/e/CLARIFY-KG-pipeline/mapping/lc_clinical_notes_SLCG/BiomarkerIHQResult_lc_clinical_notes_SLCG_her2_mutation>
-    a rr:TriplesMap;
-    rml:logicalSource [ rml:source "/data/lc_clinical_notes_SLCG/her2_mutation_lc_clinical_notes_SLCG_PROJECT5.csv";
-                rml:referenceFormulation ql:CSV
-                ];
-    rr:subjectMap [
-        rml:reference "findSemantic_ub13bL127C24";
-        rr:termType rr:IRI
-    ];
-    rr:predicateObjectMap [
-        rr:predicate clarify:hasOriginalValue;
-        rr:objectMap [
-        rml:reference "result_her2_ihq"
-        ]
     ];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
-        rr:template  "http://research.tib.eu/clarify2020/vocab/BiomarkerTestResult"
+        rr:template  "http://research.tib.eu/clarify2020/vocab/PerformedStudyStatus"
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate clarify:hasOriginalValue;
+        rr:objectMap [
+        rml:reference "study_performed"
         ]
     ].
 
