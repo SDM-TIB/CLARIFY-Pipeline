@@ -76,6 +76,7 @@
 		rr:predicate clarify:relapseYear;
 		rr:objectMap [
 			rml:reference "recurrence_year";
+		        rr:datatype xsd:gYear;
 		]
 	];
 	rr:predicateObjectMap [
