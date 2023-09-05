@@ -382,7 +382,7 @@
 
 ################ RDB information #####################
 <RDB_source> a d2rq:Database;
-  d2rq:jdbcDSN "CLARIFY_Patient_IDs";
+  d2rq:jdbcDSN "CLARIFY_Patient_IDs_v2";
   d2rq:jdbcDriver "com.mysql.cj.jdbc.Driver"; 
   d2rq:username "";
   d2rq:password "" .
