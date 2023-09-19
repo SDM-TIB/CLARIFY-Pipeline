@@ -93,59 +93,6 @@
 		]
 	].
 
-<Drug1_Annotation_drug_drugDrugInteraction_symmetric>
-	rml:logicalSource [ rml:source "/data/drug/Symmetric_DDI_corpus.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/{CUI_1}";
-		rr:class clarify:Annotation
-	];
-	rr:predicateObjectMap [
-		rr:predicate clarify:annID;
-		rr:objectMap [ 
-			rml:reference "CUI_1" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate clarify:annLabel;
-		rr:objectMap [ 
-			rml:reference "Drug1Label" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate prov:has_provenance;
-		rr:objectMap [
-			rr:constant "http://research.tib.eu/clarify2020/entity/UMLS"
-		]
-	].
-
-<Drug2_Annotation_drug_drugDrugInteraction_symmetric>
-	rml:logicalSource [ rml:source "/data/drug/Symmetric_DDI_corpus.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://research.tib.eu/clarify2020/entity/{CUI_2}";
-		rr:class clarify:Annotation
-	];
-	rr:predicateObjectMap [
-		rr:predicate clarify:annID;
-		rr:objectMap [ 
-			rml:reference "CUI_2" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate clarify:annLabel;
-		rr:objectMap [ 
-			rml:reference "Drug2Label" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate prov:has_provenance;
-		rr:objectMap [
-			rr:constant "http://research.tib.eu/clarify2020/entity/UMLS"
-		]
-	].
 
 
 
