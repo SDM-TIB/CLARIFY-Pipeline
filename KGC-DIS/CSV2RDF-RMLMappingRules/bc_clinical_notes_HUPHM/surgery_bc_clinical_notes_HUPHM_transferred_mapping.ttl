@@ -42,7 +42,7 @@
                 rml:referenceFormulation ql:CSV
                 ];
     rr:subjectMap [
-        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Surgery_{date_year}";
+        rr:template "http://research.tib.eu/clarify2020/entity/{ehr}_Surgery_{n_surgery}";
         rr:class clarify:TreatmentEpisode
     ];
     rr:predicateObjectMap [
